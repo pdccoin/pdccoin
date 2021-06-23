@@ -1,1 +1,6 @@
-theme: jekyll-theme-cayman
+baseurl: "/"
+url: "https://btc.pandoracoin.info"
+<!-- baseurl is set to "/" in _config.yml -->
+<!-- url is set to "https://btc.pandoracoin.info" in _config.yml -->
+{{ '/images/dog.jpeg' | absolute_url }}
+# theme: jekyll-theme-cayman
