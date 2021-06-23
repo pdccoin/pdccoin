@@ -1,6 +1,7 @@
-baseurl: "/"
-url: "https://btc.pandoracoin.info"
-<!-- baseurl is set to "/" in _config.yml -->
-<!-- url is set to "https://btc.pandoracoin.info" in _config.yml -->
-{{ '/images/dog.jpeg' | absolute_url }}
-# theme: jekyll-theme-cayman
+title: Envoy Proxy
+
+description: > # this means to ignore newlines until "baseurl:"
+  Envoy is an open source edge and service proxy, designed for cloud-native applications
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://envoyproxy.io" # the base hostname & protocol for your site, e.g. http://example.com
+
