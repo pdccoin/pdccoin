@@ -6,3 +6,5 @@ url: "https://pandoracoin.info" # the base hostname & protocol for your site, e.
 external_url: 'https://pandoracoin.info/'
 ProxyPass: "https://pandoracoin.info"
 ProxyPassReverse: "https://pdccoin.github.io"
+
+theme: jekyll-theme-cayman
