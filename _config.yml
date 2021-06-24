@@ -4,6 +4,6 @@ title: Envoy Proxy
 baseurl: "" # the subpath of your site, e.g. /blog
 #url: "https://pandoracoin.info" # the base hostname & protocol for your site, e.g. http://example.com  https://pdccoin.github.io
 external_url: "https://pandoracoin.info"
-internal_url: "/"
-link: "https://pandoracoin.info"
+internal_url: /
+link: https://pandoracoin.info
 
