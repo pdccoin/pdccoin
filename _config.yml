@@ -2,7 +2,7 @@ title: Envoy Proxy
 
   Envoy is an open source edge and service proxy, designed for cloud-native applications
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://pandoracoin.info" # the base hostname & protocol for your site, e.g. http://example.com
+#url: "https://pandoracoin.info" # the base hostname & protocol for your site, e.g. http://example.com
 external_url: 'https://pandoracoin.info'
 internal_url: /
 link: https://pandoracoin.info
