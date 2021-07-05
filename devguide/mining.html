@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="This site aims to provide the docs
+                you need to understand Pandora and start building Pandora-based
+                applications." />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta property="og:title" content="Mining &#8212; Pandora" />
+    <meta property="og:description" content="This site aims to provide the
+    docs you need to understand Pandora and start building Pandora-based
+    applications." />
+    <meta property="og:image" content="https://developer.pandora.org/_static/pandoradocs.png" />
+    <meta property="og:type" content="website" />
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap" rel="stylesheet">
+    
+    <title>Mining &#8212; Pandora</title>
+
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinxbootstrap4.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.3.1-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/main.css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/js/jquery.qrcode.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/sphinxbootstrap4.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Reference" href="../reference/index.html" />
+    <link rel="prev" title="P2P Network" href="p2p_network.html" /> 
+  </head><body>
+  
+<nav class="navbar navbar-expand-md  fixed-top navbar-dark">
+		<div class="content-container d-flex flex-wrap">
+			<a class="navbar-brand py-1" href="../index.html">
+				<div class="header-logo">
+					<div class="logo-light"></div>
+				</div>
+			</a>
+			<button class="navbar-toggler navbar-dark ml-auto py-2 black" type="button" data-toggle="collapse"
+				data-target="#exCollapsingNavbar2">
+				&#9776;
+			</button>
+			<div class="navbar-collapse collapse" id="exCollapsingNavbar2">
+				<ul class="navbar-nav mr-auto">
+					
+				</ul>
+				<div class="dropdown-divider d-block d-md-none my-3"></div>
+				
+<form class="form-inline navbar-search" action="../search.html" method="get">
+  <input type="text" name="q" class="navbar-search-input form-control" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+			</div>
+		</div>
+	
+		<!--<div class="row hidden-sm-up">
+						<div class="collapse navbar-toggleable-xs container" id="exCollapsingNavbar2">
+								<div class="container">
+								　　 <a class="navbar-brand" href="../index.html">
+												Pandora
+										</a>
+								</div>
+								<ul class="nav navbar-nav">
+								</ul>
+								<div class="dropdown-divider"></div>
+								<div class="navbar-text">search<div>
+								
+<form class="form-inline navbar-search" action="../search.html" method="get">
+  <input type="text" name="q" class="navbar-search-input form-control" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+						</div>
+				</div>-->
+</nav>
+</div>
+
+  
+  <div class="breadcrumbs-section" role="navigation" aria-label="related navigation">
+	<div class="content-container">
+		<div class="d-flex justify-content-between flex-wrap">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">
+					<a href="../index.html">Pandora</a>
+				</li>
+				<li class="breadcrumb-item">
+					<a href="index.html"  accesskey="U" class="active" >Developer Guides</a>
+				</li>
+				<li class="breadcrumb-item active">Mining</li>
+			</ol>
+
+			<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+				<a href="p2p_network.html" title="Previous Chapter: P2P Network" class="btn btn-primary"
+					role="botton" accesskey="P">
+					&laquo; P2P Network
+				</a>
+				<a href="../reference/index.html" title="Next Chapter: Reference" class="btn btn-primary"
+					role="botton" accesskey="N">
+					Reference &raquo;
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+  <div class="main container-fluid">
+    <div class="content-container">
+      <div class="row"> 
+  
+      <div class="sphinxsidebar d-none d-md-block">
+        <div class="sphinxsidebarwrapper">          
+            <h4>Table Of Contents</h4>
+            
+            
+              <div class="sidebartoctree">
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="block_chain.html">Block Chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transactions.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contracts.html">Contracts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wallets.html">Wallets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="payment_processing.html">Payment Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operating_modes.html">Operating Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="p2p_network.html">P2P Network</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="mining.html#">Mining</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../reference/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/block_chain.html">Block Chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/transactions.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/wallets.html">Wallets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/p2p_networking.html">P2P Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/rpc/index.html">RPC API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/testing.html">Testing Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/transactions.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/payment_processing.html">Payment Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/p2p_networking.html">P2P Network</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+              </div>
+            
+          
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="p2p_network.html"
+                        title="previous chapter">P2P Network</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../reference/index.html"
+                        title="next chapter">Reference</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div>
+    <h4>Contribute</h4>
+    <p class="topless">
+      <a href="https://github.com/pandora-documentation/website/blob/master/devguide/mining.rst">Edit Page</a>
+    </p>
+  </div>
+        </div>
+      </div>
+       
+  
+        <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+              
+  <div class="section" id="mining">
+<h1>Mining<a class="headerlink" href="mining.html#mining" title="Permalink to this headline">¶</a></h1>
+<p>Mining adds new blocks to the block chain, making transaction history hard to modify.</p>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="mining.html#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Mining today takes on two forms:</p>
+<ul class="simple">
+<li><p>Solo mining, where the miner attempts to generate new blocks on his own, with the proceeds from the block reward and transaction fees going entirely to himself, allowing him to receive large payments with a higher variance (longer time between payments)</p></li>
+<li><p>Pooled mining, where the miner pools resources with other miners to find blocks more often, with the proceeds being shared among the pool miners in rough correlation to the amount of hashing power they each contributed, allowing the miner to receive small payments with a lower variance (shorter time between payments).</p></li>
+</ul>
+</div>
+<div class="section" id="solo-mining">
+<h2>Solo Mining<a class="headerlink" href="mining.html#solo-mining" title="Permalink to this headline">¶</a></h2>
+<p>As illustrated below, solo miners typically use <code class="docutils literal notranslate"><span class="pre">pandorad</span></code> to get new transactions from the <a class="reference external" href="p2p_network.html">network</a>. Their mining software periodically polls <code class="docutils literal notranslate"><span class="pre">pandorad</span></code> for new transactions using the <a class="reference external" href="../reference/rpc/getblocktemplate.html">“getblocktemplate” RPC</a>, which provides the list of new transactions plus the public key to which the coinbase transaction should be sent.</p>
+<div class="figure align-default" id="id1">
+<img alt="Solo Pandora Mining" src="../_images/en-solo-mining-overview.svg" /><p class="caption"><span class="caption-text">Solo Pandora Mining</span><a class="headerlink" href="mining.html#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>The mining software constructs a block using the template (described below) and creates a block header. It then sends the 80-byte block header to its mining hardware (an ASIC) along with a target threshold (difficulty setting). The mining hardware iterates through every possible value for the block header nonce and generates the corresponding hash.</p>
+<p>If none of the hashes are below the threshold, the mining hardware gets an updated block header with a new merkle root from the mining software; this new block header is created by adding extra nonce data to the coinbase field of the coinbase transaction.</p>
+<p>On the other hand, if a hash is found below the target threshold, the mining hardware returns the block header with the successful nonce to the mining software. The mining software combines the header with the block and sends the completed block to <code class="docutils literal notranslate"><span class="pre">pandorad</span></code> to be broadcast to the <a class="reference external" href="p2p_network.html">network</a> for addition to the block chain.</p>
+</div>
+<div class="section" id="pool-mining">
+<h2>Pool Mining<a class="headerlink" href="mining.html#pool-mining" title="Permalink to this headline">¶</a></h2>
+<p>Pool miners follow a similar workflow, illustrated below, which allows mining pool operators to pay miners based on their share of the work done. The mining pool gets new transactions from the <a class="reference external" href="p2p_network.html">network</a> using <code class="docutils literal notranslate"><span class="pre">pandorad</span></code>. Using one of the methods discussed later, each miner’s mining software connects to the pool and requests the information it needs to construct block headers.</p>
+<div class="figure align-default" id="id2">
+<img alt="Pooled Pandora Mining" src="../_images/en-pooled-mining-overview.svg" /><p class="caption"><span class="caption-text">Pooled Pandora Mining</span><a class="headerlink" href="mining.html#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>In pooled mining, the mining pool sets the target threshold a few orders of magnitude higher (less difficult) than the <a class="reference external" href="p2p_network.html">network</a> difficulty. This causes the mining hardware to return many block headers which don’t hash to a value eligible for inclusion on the block chain but which do hash below the pool’s target, proving (on average) that the miner checked a percentage of the possible hash values.</p>
+<p>The miner then sends to the pool a copy of the information the pool needs to validate that the header will hash below the target and that the block of transactions referred to by the header merkle root field is valid for the pool’s purposes. (This usually means that the coinbase transaction must pay the pool.)</p>
+<p>The information the miner sends to the pool is called a share because it proves the miner did a share of the work. By chance, some shares the pool receives will also be below the <a class="reference external" href="p2p_network.html">network</a> target—the mining pool sends these to the <a class="reference external" href="p2p_network.html">network</a> to be added to the block chain.</p>
+<p>The block reward and transaction fees that come from mining that block are paid to the mining pool. The mining pool pays out a portion of these proceeds to individual miners based on how many shares they generated. For example, if the mining pool’s target threshold is 100 times lower than the <a class="reference external" href="p2p_network.html">network</a> target threshold, 100 shares will need to be generated on average to create a successful block, so the mining pool can pay 1/100th of its payout for each share received. Different mining pools use different reward distribution systems based on this basic share system.</p>
+</div>
+<div class="section" id="block-prototypes">
+<h2>Block Prototypes<a class="headerlink" href="mining.html#block-prototypes" title="Permalink to this headline">¶</a></h2>
+<p>In both solo and pool mining, the mining software needs to get the information necessary to construct block headers. This subsection describes, in a linear way, how that information is transmitted and used. However, in actual implementations, parallel threads and queuing are used to keep ASIC hashers working at maximum capacity.</p>
+<div class="section" id="getwork-rpc">
+<h3>getwork RPC<a class="headerlink" href="mining.html#getwork-rpc" title="Permalink to this headline">¶</a></h3>
+<p>The simplest and earliest method was the now-deprecated Pandora Core <code class="docutils literal notranslate"><span class="pre">getwork</span></code> <a class="reference external" href="../reference/rpc/index.html">RPC</a>, which constructs a header for the miner directly. Since a header only contains a single 4-byte nonce good for about 4 gigahashes, many modern miners need to make dozens or hundreds of <code class="docutils literal notranslate"><span class="pre">getwork</span></code> requests a second. Solo miners may still use <code class="docutils literal notranslate"><span class="pre">getwork</span></code> on v0.9.5 or below, but most pools today discourage or disallow its use.</p>
+</div>
+<div class="section" id="getblocktemplate-rpc">
+<h3>getblocktemplate RPC<a class="headerlink" href="mining.html#getblocktemplate-rpc" title="Permalink to this headline">¶</a></h3>
+<p>An improved method is the Pandora Core <a class="reference external" href="../reference/rpc/getblocktemplate.html">“getblocktemplate” RPC</a>. This provides the mining software with much more information:</p>
+<ol class="arabic simple">
+<li><p>The information necessary to construct a coinbase transaction paying the pool or the solo miner’s <code class="docutils literal notranslate"><span class="pre">pandorad</span></code> wallet.</p></li>
+<li><p>A complete dump of the transactions <code class="docutils literal notranslate"><span class="pre">pandorad</span></code> or the mining pool suggests including in the block, allowing the mining software to inspect the transactions, optionally add additional transactions, and optionally remove non-required transactions.</p></li>
+<li><p>Other information necessary to construct a block header for the next block: the block version, previous block hash, and bits (target).</p></li>
+<li><p>The mining pool’s current target threshold for accepting shares. (For solo miners, this is the <a class="reference external" href="p2p_network.html">network</a> target.)</p></li>
+</ol>
+<p>Using the transactions received, the mining software adds a nonce to the coinbase extra nonce field and then converts all the transactions into a merkle tree to derive a merkle root it can use in a block header. Whenever the extra nonce field needs to be changed, the mining software rebuilds the necessary parts of the merkle tree and updates the time and merkle root fields in the block header.</p>
+<p>Like all <code class="docutils literal notranslate"><span class="pre">pandorad</span></code> <a class="reference external" href="../reference/rpc/index.html">RPCs</a>, <a class="reference external" href="../reference/rpc/getblocktemplate.html">“getblocktemplate”</a> is sent over HTTP. To ensure they get the most recent work, most miners use <a class="reference external" href="https://en.wikipedia.org/wiki/Push_technology#Long_polling">HTTP longpoll</a> to leave a <a class="reference external" href="../reference/rpc/getblocktemplate.html">“getblocktemplate”</a> request open at all times. This allows the mining pool to push a new <a class="reference external" href="../reference/rpc/getblocktemplate.html">“getblocktemplate”</a> to the miner as soon as any miner on the <a class="reference external" href="p2p_network.html">peer-to-peer network</a> publishes a new block or the pool wants to send more transactions to the mining software.</p>
+</div>
+</div>
+<div class="section" id="stratum">
+<h2>Stratum<a class="headerlink" href="mining.html#stratum" title="Permalink to this headline">¶</a></h2>
+<p>A widely used alternative to <a class="reference external" href="../reference/rpc/getblocktemplate.html">“getblocktemplate”</a> is the <a class="reference external" href="http://mining.pandora.cz/stratum-mining">Stratum mining protocol</a>. Stratum focuses on giving miners the minimal information they need to construct block headers on their own:</p>
+<ol class="arabic simple">
+<li><p>The information necessary to construct a coinbase transaction paying the pool.</p></li>
+<li><p>The parts of the merkle tree which need to be re-hashed to create a new merkle root when the coinbase transaction is updated with a new extra nonce. The other parts of the merkle tree, if any, are not sent, effectively limiting the amount of data which needs to be sent to (at most) about a kilobyte at current transaction volume.</p></li>
+<li><p>All of the other non-merkle root information necessary to construct a block header for the next block.</p></li>
+<li><p>The mining pool’s current target threshold for accepting shares.</p></li>
+</ol>
+<p>Using the coinbase transaction received, the mining software adds a nonce to the coinbase extra nonce field, hashes the coinbase transaction, and adds the hash to the received parts of the merkle tree. The tree is hashed as necessary to create a merkle root, which is added to the block header information received. Whenever the extra nonce field needs to be changed, the mining software updates and re-hashes the coinbase transaction, rebuilds the merkle root, and updates the header merkle root field.</p>
+<p>Unlike <a class="reference external" href="../reference/rpc/getblocktemplate.html">“getblocktemplate”</a>, miners using Stratum cannot inspect or add transactions to the block they’re currently mining. Also unlike <a class="reference external" href="../reference/rpc/getblocktemplate.html">“getblocktemplate”</a>, the Stratum protocol uses a two-way TCP socket directly, so miners don’t need to use HTTP longpoll to ensure they receive immediate updates from mining pools when a new block is broadcast to the <a class="reference external" href="p2p_network.html">peer-to-peer network</a>.</p>
+<p><strong>Resources:</strong> The GPLv3 <a class="reference external" href="https://github.com/luke-jr/bfgminer">BFGMiner</a> mining software and AGPLv3 <a class="reference external" href="https://github.com/luke-jr/eloipool">Eloipool</a> mining pool software are widely-used among miners and pools. The <a class="reference external" href="https://github.com/pandora/libblkmaker">libblkmaker</a> C library and <a class="reference external" href="https://github.com/luke-jr/python-blkmaker">python-blkmaker</a> library, both MIT licensed, can interpret GetBlockTemplate for your programs.</p>
+</div>
+</div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="clearer"></div>
+        </div>
+      </div>
+    </div>
+<footer class="footer">
+  <div class="footer-with-logo">
+    <div class="footer-container">
+      <a href="https://pandora.org/">
+        <div class="footer-logo"></div>
+      </a>
+
+      <div class="footer-row ">
+        <div class="donate">
+          <div class="donate-row">
+            <div>
+              <span class="footer-title">Support Pandora.org:</span>
+              <button onclick="openDonationModal()" class="donate-btn">Donate</button>
+              <p class="donate-text">
+                <a class="donate-link" href="pandora:3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd" target="_blank">3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footermenu">
+          <div class="footermenu-item footermenu-introduction">
+            <p class="footer-title">Introduction:</p>
+            <ul class="footermenu-list">
+              <li>
+                <a href="https://pandora.org/en/pandora-for-individuals">Individuals</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/pandora-for-businesses">Businesses</a>
+              </li>
+              <li>
+                <a href="../index.html">Developers</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/getting-started">Getting started</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/how-it-works">How it works</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/you-need-to-know">You need to know</a>
+              </li>
+                <a href="https://pandora.org/en/pandora-paper">White paper</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="footermenu-item footermenu-resources">
+            <p class="footer-title">Resources:</p>
+            <ul class="footermenu-list">
+              <li>
+                <a href="https://pandora.org/en/resources">Resources</a>
+              <li>
+                <a href="https://pandora.org/en/exchanges">Exchanges</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/community">Community</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/vocabulary">Vocabulary</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/events">Events</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/pandora-core/">Pandora Core</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="footermenu-item footermenu-participate">
+            <p class="footer-title">Participate:</p>
+            <ul class="footermenu-list">
+              <li>
+                <a href="https://pandora.org/en/support-pandora">Support Pandora</a>
+              
+              </li>
+              <li>
+                <a href="https://pandora.org/en/buy">Buy Pandora</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/full-node">Running a full node</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/development">Development</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footermenu-item footermenu-other">
+            <p class="footer-title">Other:</p>
+            <a href="https://pandora.org/en/scams">Avoid Scams</a>
+            <a href="https://pandora.org/en/legal">Legal</a>
+            <a href="https://pandora.org/en/privacy">Privacy Policy</a>
+            <a href="https://pandora.org/en/press">Press</a>
+            <a href="https://pandora.org/en/about-us">About pandora.org</a>
+            <a href="https://pandora.org/en/blog">Blog</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+      <div>&copy; Copyright Pandora Project 2009-2020.</div>
+  </div>
+</footer>
+
+<div id="donation-modal" style="display: none" class="donation-modal open">
+  <div>
+    <div>
+      <div class="modal-close-btn" onclick="closeDonationModal()">×</div>
+      <p class="modal-header-text">Donate to Pandora.org</p>
+    </div>
+    <p class="modal-subheader">Use this QR code or address below</p>
+    <div style="text-align: center;">
+      <div id="donation-qr-code" data-address="3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd"></div>
+    </div>
+    <div>
+      <a
+        class="donation-btc-address"
+        href="pandora:3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd"
+        target="_blank"
+      >
+        3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd
+      </a>
+    </div>
+    <div style="overflow-y:hidden;text-align: center;">
+      <div class="donation-buttons">
+        <button type="button" class="donation-amount-btn" data-amount-usd="5">
+          $5.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+        </button>
+        <button type="button" class="donation-amount-btn" data-amount-usd="25">
+          $25.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+        </button>
+        <button type="button" class="donation-amount-btn" data-amount-usd="50">
+          $50.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+        </button>
+      </div>
+
+      <div class="donation-inputs">
+        <input
+          type="text"
+          placeholder="Or custom amount? (BTC)"
+          id="donation-input-amount-btc" class="donation-amount-input">
+        <input
+          type="text"
+          placeholder="Or custom amount? (USD)"
+          id="donation-input-amount-usd" class="donation-amount-input">
+      </div>
+
+      <div>
+        <textarea
+          class="donation-amount-input"
+          id="donation-input-message"
+          placeholder="Optional description (for your wallet)"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+  </body>
+</html>
