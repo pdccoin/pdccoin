@@ -1,0 +1,502 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="This site aims to provide the docs
+                you need to understand Pandora and start building Pandora-based
+                applications." />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta property="og:title" content="sendmany &#8212; Pandora" />
+    <meta property="og:description" content="This site aims to provide the
+    docs you need to understand Pandora and start building Pandora-based
+    applications." />
+    <meta property="og:image" content="https://developer.pandora.org/static/pandoradocs.png" />
+    <meta property="og:type" content="website" />
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap" rel="stylesheet">
+    
+    <title>sendmany &#8212; Pandora</title>
+
+    <link rel="stylesheet" href="../../static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../static/sphinxbootstrap4.css" type="text/css" />
+    <link rel="stylesheet" href="../../static/bootstrap-4.3.1-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css" />
+    
+    <script id="documentation_options" data-url_root="../../" src="../../static/documentation_options.js"></script>
+    <script src="../../static/jquery.js"></script>
+    <script src="../../static/underscore.js"></script>
+    <script src="../../static/doctools.js"></script>
+    <script src="../../static/language_data.js"></script>
+    <script src="../../static/js/jquery.qrcode.js"></script>
+    <script type="text/javascript" src="../../static/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../static/sphinxbootstrap4.js"></script>
+    <link rel="shortcut icon" href="../../static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="sendtoaddress" href="sendtoaddress.html" />
+    <link rel="prev" title="send" href="send.html" /> 
+  </head><body>
+  
+<nav class="navbar navbar-expand-md  fixed-top navbar-dark">
+		<div class="content-container d-flex flex-wrap">
+			<a class="navbar-brand py-1" href="../../index.html">
+				<div class="header-logo">
+					<div class="logo-light"></div>
+				</div>
+			</a>
+			<button class="navbar-toggler navbar-dark ml-auto py-2 black" type="button" data-toggle="collapse"
+				data-target="#exCollapsingNavbar2">
+				&#9776;
+			</button>
+			<div class="navbar-collapse collapse" id="exCollapsingNavbar2">
+				<ul class="navbar-nav mr-auto">
+					
+				</ul>
+				<div class="dropdown-divider d-block d-md-none my-3"></div>
+				
+<form class="form-inline navbar-search" action="../../search.html" method="get">
+  <input type="text" name="q" class="navbar-search-input form-control" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+			</div>
+		</div>
+	
+		<!--<div class="row hidden-sm-up">
+						<div class="collapse navbar-toggleable-xs container" id="exCollapsingNavbar2">
+								<div class="container">
+								　　 <a class="navbar-brand" href="../../index.html">
+												Pandora
+										</a>
+								</div>
+								<ul class="nav navbar-nav">
+								</ul>
+								<div class="dropdown-divider"></div>
+								<div class="navbar-text">search<div>
+								
+<form class="form-inline navbar-search" action="../../search.html" method="get">
+  <input type="text" name="q" class="navbar-search-input form-control" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+						</div>
+				</div>-->
+</nav>
+</div>
+
+  
+  <div class="breadcrumbs-section" role="navigation" aria-label="related navigation">
+	<div class="content-container">
+		<div class="d-flex justify-content-between flex-wrap">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">
+					<a href="../../index.html">Pandora</a>
+				</li>
+				<li class="breadcrumb-item">
+					<a href="../index.html" >Reference</a>
+				</li>
+				<li class="breadcrumb-item">
+					<a href="index.html"  accesskey="U" class="active" >RPC API Reference</a>
+				</li>
+				<li class="breadcrumb-item active">sendmany</li>
+			</ol>
+
+			<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+				<a href="send.html" title="Previous Chapter: send" class="btn btn-primary"
+					role="botton" accesskey="P">
+					&laquo; send
+				</a>
+				<a href="sendtoaddress.html" title="Next Chapter: sendtoaddress" class="btn btn-primary"
+					role="botton" accesskey="N">
+					sendtoaddress &raquo;
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+  <div class="main container-fluid">
+    <div class="content-container">
+      <div class="row"> 
+  
+      <div class="sphinxsidebar d-none d-md-block">
+        <div class="sphinxsidebarwrapper">          
+            <h4>Table Of Contents</h4>
+            
+            
+              <div class="sidebartoctree">
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/index.html">Developer Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/block_chain.html">Block Chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/transactions.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/contracts.html">Contracts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/wallets.html">Wallets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/payment_processing.html">Payment Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/operating_modes.html">Operating Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/p2p_network.html">P2P Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/mining.html">Mining</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../block_chain.html">Block Chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transactions.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wallets.html">Wallets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p2p_networking.html">P2P Network</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">RPC API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/index.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/testing.html">Testing Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/transactions.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/payment_processing.html">Payment Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/p2p_networking.html">P2P Network</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+</ul>
+
+              </div>
+            
+          
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="send.html"
+                        title="previous chapter">send</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sendtoaddress.html"
+                        title="next chapter">sendtoaddress</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div>
+    <h4>Contribute</h4>
+    <p class="topless">
+      <a href="https://github.com/pandora-documentation/website/blob/master/reference/rpc/sendmany.rst">Edit Page</a>
+    </p>
+  </div>
+        </div>
+      </div>
+       
+  
+        <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+              
+  <div class="section" id="sendmany">
+<h1>sendmany<a class="headerlink" href="sendmany.html#sendmany" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">sendmany</span> <span class="pre">&quot;&quot;</span> <span class="pre">{&quot;address&quot;:amount}</span> <span class="pre">(</span> <span class="pre">minconf</span> <span class="pre">&quot;comment&quot;</span> <span class="pre">[&quot;address&quot;,...]</span> <span class="pre">replaceable</span> <span class="pre">conf_target</span> <span class="pre">&quot;estimate_mode&quot;</span> <span class="pre">fee_rate</span> <span class="pre">verbose</span> <span class="pre">)</span></code></p>
+<p>Send multiple times. Amounts are double-precision floating point numbers.</p>
+<p>Requires wallet passphrase to be set with walletpassphrase call if wallet is encrypted.</p>
+<div class="section" id="argument-1-dummy">
+<h2>Argument #1 - dummy<a class="headerlink" href="sendmany.html#argument-1-dummy" title="Permalink to this headline">¶</a></h2>
+<p><strong>Type:</strong> string, required</p>
+<p>Must be set to “” for backwards compatibility.</p>
+</div>
+<div class="section" id="argument-2-amounts">
+<h2>Argument #2 - amounts<a class="headerlink" href="sendmany.html#argument-2-amounts" title="Permalink to this headline">¶</a></h2>
+<p><strong>Type:</strong> json object, required</p>
+<p>The addresses and amounts</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="n">amount</span><span class="p">,</span>    <span class="p">(</span><span class="n">numeric</span> <span class="ow">or</span> <span class="n">string</span><span class="p">,</span> <span class="n">required</span><span class="p">)</span> <span class="n">The</span> <span class="n">pandora</span> <span class="n">address</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">key</span><span class="p">,</span> <span class="n">the</span> <span class="n">numeric</span> <span class="n">amount</span> <span class="p">(</span><span class="n">can</span> <span class="n">be</span> <span class="n">string</span><span class="p">)</span> <span class="ow">in</span> <span class="n">PDC</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">value</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="argument-3-minconf">
+<h2>Argument #3 - minconf<a class="headerlink" href="sendmany.html#argument-3-minconf" title="Permalink to this headline">¶</a></h2>
+<p><strong>Type:</strong> numeric, optional</p>
+<p>Ignored dummy value</p>
+</div>
+<div class="section" id="argument-4-comment">
+<h2>Argument #4 - comment<a class="headerlink" href="sendmany.html#argument-4-comment" title="Permalink to this headline">¶</a></h2>
+<p><strong>Type:</strong> string, optional</p>
+<p>A comment</p>
+</div>
+<div class="section" id="argument-5-subtractfeefrom">
+<h2>Argument #5 - subtractfeefrom<a class="headerlink" href="sendmany.html#argument-5-subtractfeefrom" title="Permalink to this headline">¶</a></h2>
+<p><strong>Type:</strong> json array, optional</p>
+<dl class="simple">
+<dt>The addresses.</dt><dd><p>The fee will be equally deducted from the amount of each selected address.
+Those recipients will receive less pandoras than you enter in their corresponding amount field.
+If no addresses are specified here, the sender pays the fee.</p>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+  <span class="s2">&quot;address&quot;</span><span class="p">,</span>            <span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="n">Subtract</span> <span class="n">fee</span> <span class="kn">from</span> <span class="nn">this</span> <span class="n">address</span>
+  <span class="o">...</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="argument-6-replaceable">
+<h2>Argument #6 - replaceable<a class="headerlink" href="sendmany.html#argument-6-replaceable" title="Permalink to this headline">¶</a></h2>
+<p><strong>Type:</strong> boolean, optional, default=wallet default</p>
+<p>Allow this transaction to be replaced by a transaction with higher fees via BIP 125</p>
+</div>
+<div class="section" id="argument-7-conf-target">
+<h2>Argument #7 - conf_target<a class="headerlink" href="sendmany.html#argument-7-conf-target" title="Permalink to this headline">¶</a></h2>
+<p><strong>Type:</strong> numeric, optional, default=wallet -txconfirmtarget</p>
+<p>Confirmation target in blocks</p>
+</div>
+<div class="section" id="argument-8-estimate-mode">
+<h2>Argument #8 - estimate_mode<a class="headerlink" href="sendmany.html#argument-8-estimate-mode" title="Permalink to this headline">¶</a></h2>
+<p><strong>Type:</strong> string, optional, default=unset</p>
+<dl class="simple">
+<dt>The fee estimate mode, must be one of (case insensitive):</dt><dd><p>“unset”
+“economical”
+“conservative”</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="argument-9-fee-rate">
+<h2>Argument #9 - fee_rate<a class="headerlink" href="sendmany.html#argument-9-fee-rate" title="Permalink to this headline">¶</a></h2>
+<p><strong>Type:</strong> numeric or string, optional, default=not set, fall back to wallet fee estimation</p>
+<p>Specify a fee rate in sat/vB.</p>
+</div>
+<div class="section" id="result-if-verbose-is-not-set-or-set-to-false">
+<h2>Result (if verbose is not set or set to false)<a class="headerlink" href="sendmany.html#result-if-verbose-is-not-set-or-set-to-false" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>hex</p></td>
+<td><p>string</p></td>
+<td><p>The transaction id for the send. Only 1 transaction is created regardless of</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="result-if-verbose-is-set-to-true">
+<h2>Result (if verbose is set to true)<a class="headerlink" href="sendmany.html#result-if-verbose-is-set-to-true" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>                          <span class="p">(</span><span class="n">json</span> <span class="nb">object</span><span class="p">)</span>
+  <span class="s2">&quot;txid&quot;</span> <span class="p">:</span> <span class="s2">&quot;hex&quot;</span><span class="p">,</span>          <span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="n">The</span> <span class="n">transaction</span> <span class="nb">id</span> <span class="k">for</span> <span class="n">the</span> <span class="n">send</span><span class="o">.</span> <span class="n">Only</span> <span class="mi">1</span> <span class="n">transaction</span> <span class="ow">is</span> <span class="n">created</span> <span class="n">regardless</span> <span class="n">of</span>
+                           <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">addresses</span><span class="o">.</span>
+  <span class="s2">&quot;fee reason&quot;</span> <span class="p">:</span> <span class="s2">&quot;str&quot;</span>     <span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="n">The</span> <span class="n">transaction</span> <span class="n">fee</span> <span class="n">reason</span><span class="o">.</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="sendmany.html#examples" title="Permalink to this headline">¶</a></h2>
+<p>Send two amounts to two different addresses::</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pandora-cli sendmany <span class="s2">&quot;&quot;</span> <span class="s2">&quot;{\&quot;bc1q09vm5lfy0j5reeulh4x5752q25uqqvz34hufdl\&quot;:0.01,\&quot;bc1q02ad21edsxd23d32dfgqqsz4vv4nmtfzuklhy3\&quot;:0.02}&quot;</span>
+</pre></div>
+</div>
+<p>Send two amounts to two different addresses setting the confirmation and comment::</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pandora-cli sendmany <span class="s2">&quot;&quot;</span> <span class="s2">&quot;{\&quot;bc1q09vm5lfy0j5reeulh4x5752q25uqqvz34hufdl\&quot;:0.01,\&quot;bc1q02ad21edsxd23d32dfgqqsz4vv4nmtfzuklhy3\&quot;:0.02}&quot;</span> <span class="m">6</span> <span class="s2">&quot;testing&quot;</span>
+</pre></div>
+</div>
+<p>Send two amounts to two different addresses, subtract fee from amount::</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pandora-cli sendmany <span class="s2">&quot;&quot;</span> <span class="s2">&quot;{\&quot;bc1q09vm5lfy0j5reeulh4x5752q25uqqvz34hufdl\&quot;:0.01,\&quot;bc1q02ad21edsxd23d32dfgqqsz4vv4nmtfzuklhy3\&quot;:0.02}&quot;</span> <span class="m">1</span> <span class="s2">&quot;&quot;</span> <span class="s2">&quot;[\&quot;bc1q09vm5lfy0j5reeulh4x5752q25uqqvz34hufdl\&quot;,\&quot;bc1q02ad21edsxd23d32dfgqqsz4vv4nmtfzuklhy3\&quot;]&quot;</span>
+</pre></div>
+</div>
+<p>As a JSON-RPC call:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl --user myusername --data-binary <span class="s1">&#39;{&quot;jsonrpc&quot;: &quot;1.0&quot;, &quot;id&quot;: &quot;curltest&quot;, &quot;method&quot;: &quot;sendmany&quot;, &quot;params&quot;: [&quot;&quot;, {&quot;bc1q09vm5lfy0j5reeulh4x5752q25uqqvz34hufdl&quot;:0.01,&quot;bc1q02ad21edsxd23d32dfgqqsz4vv4nmtfzuklhy3&quot;:0.02}, 6, &quot;testing&quot;]}&#39;</span> -H <span class="s1">&#39;content-type: text/plain;&#39;</span> http://127.0.0.1:9337/
+</pre></div>
+</div>
+</div>
+</div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="clearer"></div>
+        </div>
+      </div>
+    </div>
+<footer class="footer">
+  <div class="footer-with-logo">
+    <div class="footer-container">
+      <a href="https://pandora.org/">
+        <div class="footer-logo"></div>
+      </a>
+
+      <div class="footer-row ">
+        <div class="donate">
+          <div class="donate-row">
+            <div>
+              <span class="footer-title">Support Pandora.org:</span>
+              <button onclick="openDonationModal()" class="donate-btn">Donate</button>
+              <p class="donate-text">
+                <a class="donate-link" href="pandora:3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd" target="_blank">3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footermenu">
+          <div class="footermenu-item footermenu-introduction">
+            <p class="footer-title">Introduction:</p>
+            <ul class="footermenu-list">
+              <li>
+                <a href="https://pandora.org/en/pandora-for-individuals">Individuals</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/pandora-for-businesses">Businesses</a>
+              </li>
+              <li>
+                <a href="../../index.html">Developers</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/getting-started">Getting started</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/how-it-works">How it works</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/you-need-to-know">You need to know</a>
+              </li>
+                <a href="https://pandora.org/en/pandora-paper">White paper</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="footermenu-item footermenu-resources">
+            <p class="footer-title">Resources:</p>
+            <ul class="footermenu-list">
+              <li>
+                <a href="https://pandora.org/en/resources">Resources</a>
+              <li>
+                <a href="https://pandora.org/en/exchanges">Exchanges</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/community">Community</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/vocabulary">Vocabulary</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/events">Events</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/pandora-core/">Pandora Core</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="footermenu-item footermenu-participate">
+            <p class="footer-title">Participate:</p>
+            <ul class="footermenu-list">
+              <li>
+                <a href="https://pandora.org/en/support-pandora">Support Pandora</a>
+              
+              </li>
+              <li>
+                <a href="https://pandora.org/en/buy">Buy Pandora</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/full-node">Running a full node</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/development">Development</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footermenu-item footermenu-other">
+            <p class="footer-title">Other:</p>
+            <a href="https://pandora.org/en/scams">Avoid Scams</a>
+            <a href="https://pandora.org/en/legal">Legal</a>
+            <a href="https://pandora.org/en/privacy">Privacy Policy</a>
+            <a href="https://pandora.org/en/press">Press</a>
+            <a href="https://pandora.org/en/about-us">About pandora.org</a>
+            <a href="https://pandora.org/en/blog">Blog</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+      <div>&copy; Copyright Pandora Project 2009-2020.</div>
+  </div>
+</footer>
+
+<div id="donation-modal" style="display: none" class="donation-modal open">
+  <div>
+    <div>
+      <div class="modal-close-btn" onclick="closeDonationModal()">×</div>
+      <p class="modal-header-text">Donate to Pandora.org</p>
+    </div>
+    <p class="modal-subheader">Use this QR code or address below</p>
+    <div style="text-align: center;">
+      <div id="donation-qr-code" data-address="3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd"></div>
+    </div>
+    <div>
+      <a
+        class="donation-btc-address"
+        href="pandora:3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd"
+        target="_blank"
+      >
+        3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd
+      </a>
+    </div>
+    <div style="overflow-y:hidden;text-align: center;">
+      <div class="donation-buttons">
+        <button type="button" class="donation-amount-btn" data-amount-usd="5">
+          $5.00
+          <div class="donation-amount-usd-in-btc">(... PDC)</div>
+        </button>
+        <button type="button" class="donation-amount-btn" data-amount-usd="25">
+          $25.00
+          <div class="donation-amount-usd-in-btc">(... PDC)</div>
+        </button>
+        <button type="button" class="donation-amount-btn" data-amount-usd="50">
+          $50.00
+          <div class="donation-amount-usd-in-btc">(... PDC)</div>
+        </button>
+      </div>
+
+      <div class="donation-inputs">
+        <input
+          type="text"
+          placeholder="Or custom amount? (PDC)"
+          id="donation-input-amount-btc" class="donation-amount-input">
+        <input
+          type="text"
+          placeholder="Or custom amount? (USD)"
+          id="donation-input-amount-usd" class="donation-amount-input">
+      </div>
+
+      <div>
+        <textarea
+          class="donation-amount-input"
+          id="donation-input-message"
+          placeholder="Optional description (for your wallet)"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+  </body>
+</html>

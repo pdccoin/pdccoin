@@ -1,0 +1,427 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="This site aims to provide the docs
+                you need to understand Pandora and start building Pandora-based
+                applications." />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta property="og:title" content="createmultisig &#8212; Pandora" />
+    <meta property="og:description" content="This site aims to provide the
+    docs you need to understand Pandora and start building Pandora-based
+    applications." />
+    <meta property="og:image" content="https://developer.pandora.org/static/pandoradocs.png" />
+    <meta property="og:type" content="website" />
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap" rel="stylesheet">
+    
+    <title>createmultisig &#8212; Pandora</title>
+
+    <link rel="stylesheet" href="../../static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../static/sphinxbootstrap4.css" type="text/css" />
+    <link rel="stylesheet" href="../../static/bootstrap-4.3.1-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css" />
+    
+    <script id="documentation_options" data-url_root="../../" src="../../static/documentation_options.js"></script>
+    <script src="../../static/jquery.js"></script>
+    <script src="../../static/underscore.js"></script>
+    <script src="../../static/doctools.js"></script>
+    <script src="../../static/language_data.js"></script>
+    <script src="../../static/js/jquery.qrcode.js"></script>
+    <script type="text/javascript" src="../../static/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../static/sphinxbootstrap4.js"></script>
+    <link rel="shortcut icon" href="../../static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="deriveaddresses" href="deriveaddresses.html" />
+    <link rel="prev" title="utxoupdatepsbt" href="utxoupdatepsbt.html" /> 
+  </head><body>
+  
+<nav class="navbar navbar-expand-md  fixed-top navbar-dark">
+		<div class="content-container d-flex flex-wrap">
+			<a class="navbar-brand py-1" href="../../index.html">
+				<div class="header-logo">
+					<div class="logo-light"></div>
+				</div>
+			</a>
+			<button class="navbar-toggler navbar-dark ml-auto py-2 black" type="button" data-toggle="collapse"
+				data-target="#exCollapsingNavbar2">
+				&#9776;
+			</button>
+			<div class="navbar-collapse collapse" id="exCollapsingNavbar2">
+				<ul class="navbar-nav mr-auto">
+					
+				</ul>
+				<div class="dropdown-divider d-block d-md-none my-3"></div>
+				
+<form class="form-inline navbar-search" action="../../search.html" method="get">
+  <input type="text" name="q" class="navbar-search-input form-control" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+			</div>
+		</div>
+	
+		<!--<div class="row hidden-sm-up">
+						<div class="collapse navbar-toggleable-xs container" id="exCollapsingNavbar2">
+								<div class="container">
+								　　 <a class="navbar-brand" href="../../index.html">
+												Pandora
+										</a>
+								</div>
+								<ul class="nav navbar-nav">
+								</ul>
+								<div class="dropdown-divider"></div>
+								<div class="navbar-text">search<div>
+								
+<form class="form-inline navbar-search" action="../../search.html" method="get">
+  <input type="text" name="q" class="navbar-search-input form-control" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+						</div>
+				</div>-->
+</nav>
+</div>
+
+  
+  <div class="breadcrumbs-section" role="navigation" aria-label="related navigation">
+	<div class="content-container">
+		<div class="d-flex justify-content-between flex-wrap">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">
+					<a href="../../index.html">Pandora</a>
+				</li>
+				<li class="breadcrumb-item">
+					<a href="../index.html" >Reference</a>
+				</li>
+				<li class="breadcrumb-item">
+					<a href="index.html"  accesskey="U" class="active" >RPC API Reference</a>
+				</li>
+				<li class="breadcrumb-item active">createmultisig</li>
+			</ol>
+
+			<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+				<a href="utxoupdatepsbt.html" title="Previous Chapter: utxoupdatepsbt" class="btn btn-primary"
+					role="botton" accesskey="P">
+					&laquo; utxoupdatepsbt
+				</a>
+				<a href="deriveaddresses.html" title="Next Chapter: deriveaddresses" class="btn btn-primary"
+					role="botton" accesskey="N">
+					deriveaddresses &raquo;
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+  <div class="main container-fluid">
+    <div class="content-container">
+      <div class="row"> 
+  
+      <div class="sphinxsidebar d-none d-md-block">
+        <div class="sphinxsidebarwrapper">          
+            <h4>Table Of Contents</h4>
+            
+            
+              <div class="sidebartoctree">
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/index.html">Developer Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/block_chain.html">Block Chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/transactions.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/contracts.html">Contracts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/wallets.html">Wallets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/payment_processing.html">Payment Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/operating_modes.html">Operating Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/p2p_network.html">P2P Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/mining.html">Mining</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../block_chain.html">Block Chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transactions.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wallets.html">Wallets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p2p_networking.html">P2P Network</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">RPC API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/index.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/testing.html">Testing Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/transactions.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/payment_processing.html">Payment Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/p2p_networking.html">P2P Network</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+</ul>
+
+              </div>
+            
+          
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="utxoupdatepsbt.html"
+                        title="previous chapter">utxoupdatepsbt</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="deriveaddresses.html"
+                        title="next chapter">deriveaddresses</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div>
+    <h4>Contribute</h4>
+    <p class="topless">
+      <a href="https://github.com/pandora-documentation/website/blob/master/reference/rpc/createmultisig.rst">Edit Page</a>
+    </p>
+  </div>
+        </div>
+      </div>
+       
+  
+        <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+              
+  <div class="section" id="createmultisig">
+<h1>createmultisig<a class="headerlink" href="createmultisig.html#createmultisig" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">createmultisig</span> <span class="pre">nrequired</span> <span class="pre">[&quot;key&quot;,...]</span> <span class="pre">(</span> <span class="pre">&quot;address_type&quot;</span> <span class="pre">)</span></code></p>
+<p>Creates a multi-signature address with n signature of m keys required.</p>
+<p>It returns a json object with the address and redeemScript.</p>
+<div class="section" id="argument-1-nrequired">
+<h2>Argument #1 - nrequired<a class="headerlink" href="createmultisig.html#argument-1-nrequired" title="Permalink to this headline">¶</a></h2>
+<p><strong>Type:</strong> numeric, required</p>
+<p>The number of required signatures out of the n keys.</p>
+</div>
+<div class="section" id="argument-2-keys">
+<h2>Argument #2 - keys<a class="headerlink" href="createmultisig.html#argument-2-keys" title="Permalink to this headline">¶</a></h2>
+<p><strong>Type:</strong> json array, required</p>
+<p>The hex-encoded public keys.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+  <span class="s2">&quot;key&quot;</span><span class="p">,</span>      <span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="n">The</span> <span class="nb">hex</span><span class="o">-</span><span class="n">encoded</span> <span class="n">public</span> <span class="n">key</span>
+  <span class="o">...</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="argument-3-address-type">
+<h2>Argument #3 - address_type<a class="headerlink" href="createmultisig.html#argument-3-address-type" title="Permalink to this headline">¶</a></h2>
+<p><strong>Type:</strong> string, optional, default=legacy</p>
+<p>The address type to use. Options are “legacy”, “p2sh-segwit”, and “bech32”.</p>
+</div>
+<div class="section" id="result">
+<h2>Result<a class="headerlink" href="createmultisig.html#result" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>                            <span class="p">(</span><span class="n">json</span> <span class="nb">object</span><span class="p">)</span>
+  <span class="s2">&quot;address&quot;</span> <span class="p">:</span> <span class="s2">&quot;str&quot;</span><span class="p">,</span>         <span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="n">The</span> <span class="n">value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">new</span> <span class="n">multisig</span> <span class="n">address</span><span class="o">.</span>
+  <span class="s2">&quot;redeemScript&quot;</span> <span class="p">:</span> <span class="s2">&quot;hex&quot;</span><span class="p">,</span>    <span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="n">The</span> <span class="n">string</span> <span class="n">value</span> <span class="n">of</span> <span class="n">the</span> <span class="nb">hex</span><span class="o">-</span><span class="n">encoded</span> <span class="n">redemption</span> <span class="n">script</span><span class="o">.</span>
+  <span class="s2">&quot;descriptor&quot;</span> <span class="p">:</span> <span class="s2">&quot;str&quot;</span>       <span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="n">The</span> <span class="n">descriptor</span> <span class="k">for</span> <span class="n">this</span> <span class="n">multisig</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="createmultisig.html#examples" title="Permalink to this headline">¶</a></h2>
+<p>Create a multisig address from 2 public keys:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pandora-cli createmultisig <span class="m">2</span> <span class="s2">&quot;[\&quot;03789ed0bb717d88f7d321a368d905e7430207ebbd82bd342cf11ae157a7ace5fd\&quot;,\&quot;03dbc6764b8884a92e871274b87583e6d5c2a58819473e17e107ef3f6aa5a61626\&quot;]&quot;</span>
+</pre></div>
+</div>
+<p>As a JSON-RPC call:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl --user myusername --data-binary <span class="s1">&#39;{&quot;jsonrpc&quot;: &quot;1.0&quot;, &quot;id&quot;: &quot;curltest&quot;, &quot;method&quot;: &quot;createmultisig&quot;, &quot;params&quot;: [2, &quot;[\&quot;03789ed0bb717d88f7d321a368d905e7430207ebbd82bd342cf11ae157a7ace5fd\&quot;,\&quot;03dbc6764b8884a92e871274b87583e6d5c2a58819473e17e107ef3f6aa5a61626\&quot;]&quot;]}&#39;</span> -H <span class="s1">&#39;content-type: text/plain;&#39;</span> http://127.0.0.1:9337/
+</pre></div>
+</div>
+</div>
+</div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="clearer"></div>
+        </div>
+      </div>
+    </div>
+<footer class="footer">
+  <div class="footer-with-logo">
+    <div class="footer-container">
+      <a href="https://pandora.org/">
+        <div class="footer-logo"></div>
+      </a>
+
+      <div class="footer-row ">
+        <div class="donate">
+          <div class="donate-row">
+            <div>
+              <span class="footer-title">Support Pandora.org:</span>
+              <button onclick="openDonationModal()" class="donate-btn">Donate</button>
+              <p class="donate-text">
+                <a class="donate-link" href="pandora:3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd" target="_blank">3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footermenu">
+          <div class="footermenu-item footermenu-introduction">
+            <p class="footer-title">Introduction:</p>
+            <ul class="footermenu-list">
+              <li>
+                <a href="https://pandora.org/en/pandora-for-individuals">Individuals</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/pandora-for-businesses">Businesses</a>
+              </li>
+              <li>
+                <a href="../../index.html">Developers</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/getting-started">Getting started</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/how-it-works">How it works</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/you-need-to-know">You need to know</a>
+              </li>
+                <a href="https://pandora.org/en/pandora-paper">White paper</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="footermenu-item footermenu-resources">
+            <p class="footer-title">Resources:</p>
+            <ul class="footermenu-list">
+              <li>
+                <a href="https://pandora.org/en/resources">Resources</a>
+              <li>
+                <a href="https://pandora.org/en/exchanges">Exchanges</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/community">Community</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/vocabulary">Vocabulary</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/events">Events</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/pandora-core/">Pandora Core</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="footermenu-item footermenu-participate">
+            <p class="footer-title">Participate:</p>
+            <ul class="footermenu-list">
+              <li>
+                <a href="https://pandora.org/en/support-pandora">Support Pandora</a>
+              
+              </li>
+              <li>
+                <a href="https://pandora.org/en/buy">Buy Pandora</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/full-node">Running a full node</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/development">Development</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footermenu-item footermenu-other">
+            <p class="footer-title">Other:</p>
+            <a href="https://pandora.org/en/scams">Avoid Scams</a>
+            <a href="https://pandora.org/en/legal">Legal</a>
+            <a href="https://pandora.org/en/privacy">Privacy Policy</a>
+            <a href="https://pandora.org/en/press">Press</a>
+            <a href="https://pandora.org/en/about-us">About pandora.org</a>
+            <a href="https://pandora.org/en/blog">Blog</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+      <div>&copy; Copyright Pandora Project 2009-2020.</div>
+  </div>
+</footer>
+
+<div id="donation-modal" style="display: none" class="donation-modal open">
+  <div>
+    <div>
+      <div class="modal-close-btn" onclick="closeDonationModal()">×</div>
+      <p class="modal-header-text">Donate to Pandora.org</p>
+    </div>
+    <p class="modal-subheader">Use this QR code or address below</p>
+    <div style="text-align: center;">
+      <div id="donation-qr-code" data-address="3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd"></div>
+    </div>
+    <div>
+      <a
+        class="donation-btc-address"
+        href="pandora:3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd"
+        target="_blank"
+      >
+        3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd
+      </a>
+    </div>
+    <div style="overflow-y:hidden;text-align: center;">
+      <div class="donation-buttons">
+        <button type="button" class="donation-amount-btn" data-amount-usd="5">
+          $5.00
+          <div class="donation-amount-usd-in-btc">(... PDC)</div>
+        </button>
+        <button type="button" class="donation-amount-btn" data-amount-usd="25">
+          $25.00
+          <div class="donation-amount-usd-in-btc">(... PDC)</div>
+        </button>
+        <button type="button" class="donation-amount-btn" data-amount-usd="50">
+          $50.00
+          <div class="donation-amount-usd-in-btc">(... PDC)</div>
+        </button>
+      </div>
+
+      <div class="donation-inputs">
+        <input
+          type="text"
+          placeholder="Or custom amount? (PDC)"
+          id="donation-input-amount-btc" class="donation-amount-input">
+        <input
+          type="text"
+          placeholder="Or custom amount? (USD)"
+          id="donation-input-amount-usd" class="donation-amount-input">
+      </div>
+
+      <div>
+        <textarea
+          class="donation-amount-input"
+          id="donation-input-message"
+          placeholder="Optional description (for your wallet)"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+  </body>
+</html>

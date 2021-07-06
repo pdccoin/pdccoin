@@ -1,0 +1,574 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="This site aims to provide the docs
+                you need to understand Pandora and start building Pandora-based
+                applications." />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta property="og:title" content="RPC API Reference &#8212; Pandora" />
+    <meta property="og:description" content="This site aims to provide the
+    docs you need to understand Pandora and start building Pandora-based
+    applications." />
+    <meta property="og:image" content="https://developer.pandora.org/static/pandoradocs.png" />
+    <meta property="og:type" content="website" />
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap" rel="stylesheet">
+    
+    <title>RPC API Reference &#8212; Pandora</title>
+
+    <link rel="stylesheet" href="../../static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../static/sphinxbootstrap4.css" type="text/css" />
+    <link rel="stylesheet" href="../../static/bootstrap-4.3.1-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css" />
+    
+    <script id="documentation_options" data-url_root="../../" src="../../static/documentation_options.js"></script>
+    <script src="../../static/jquery.js"></script>
+    <script src="../../static/underscore.js"></script>
+    <script src="../../static/doctools.js"></script>
+    <script src="../../static/language_data.js"></script>
+    <script src="../../static/js/jquery.qrcode.js"></script>
+    <script type="text/javascript" src="../../static/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../static/sphinxbootstrap4.js"></script>
+    <link rel="shortcut icon" href="../../static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="getbestblockhash" href="getbestblockhash.html" />
+    <link rel="prev" title="P2P Network" href="../p2p_networking.html" /> 
+  </head><body>
+  
+<nav class="navbar navbar-expand-md  fixed-top navbar-dark">
+		<div class="content-container d-flex flex-wrap">
+			<a class="navbar-brand py-1" href="../../index.html">
+				<div class="header-logo">
+					<div class="logo-light"></div>
+				</div>
+			</a>
+			<button class="navbar-toggler navbar-dark ml-auto py-2 black" type="button" data-toggle="collapse"
+				data-target="#exCollapsingNavbar2">
+				&#9776;
+			</button>
+			<div class="navbar-collapse collapse" id="exCollapsingNavbar2">
+				<ul class="navbar-nav mr-auto">
+					
+				</ul>
+				<div class="dropdown-divider d-block d-md-none my-3"></div>
+				
+<form class="form-inline navbar-search" action="../../search.html" method="get">
+  <input type="text" name="q" class="navbar-search-input form-control" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+			</div>
+		</div>
+	
+		<!--<div class="row hidden-sm-up">
+						<div class="collapse navbar-toggleable-xs container" id="exCollapsingNavbar2">
+								<div class="container">
+								　　 <a class="navbar-brand" href="../../index.html">
+												Pandora
+										</a>
+								</div>
+								<ul class="nav navbar-nav">
+								</ul>
+								<div class="dropdown-divider"></div>
+								<div class="navbar-text">search<div>
+								
+<form class="form-inline navbar-search" action="../../search.html" method="get">
+  <input type="text" name="q" class="navbar-search-input form-control" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+						</div>
+				</div>-->
+</nav>
+</div>
+
+  
+  <div class="breadcrumbs-section" role="navigation" aria-label="related navigation">
+	<div class="content-container">
+		<div class="d-flex justify-content-between flex-wrap">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">
+					<a href="../../index.html">Pandora</a>
+				</li>
+				<li class="breadcrumb-item">
+					<a href="../index.html"  accesskey="U" class="active" >Reference</a>
+				</li>
+				<li class="breadcrumb-item active">RPC API Reference</li>
+			</ol>
+
+			<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+				<a href="../p2p_networking.html" title="Previous Chapter: P2P Network" class="btn btn-primary"
+					role="botton" accesskey="P">
+					&laquo; P2P Network
+				</a>
+				<a href="getbestblockhash.html" title="Next Chapter: getbestblockhash" class="btn btn-primary"
+					role="botton" accesskey="N">
+					getbestblockhash &raquo;
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+  <div class="main container-fluid">
+    <div class="content-container">
+      <div class="row"> 
+  
+      <div class="sphinxsidebar d-none d-md-block">
+        <div class="sphinxsidebarwrapper">          
+            <h4>Table Of Contents</h4>
+            
+            
+              <div class="sidebartoctree">
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/index.html">Developer Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/block_chain.html">Block Chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/transactions.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/contracts.html">Contracts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/wallets.html">Wallets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/payment_processing.html">Payment Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/operating_modes.html">Operating Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/p2p_network.html">P2P Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/mining.html">Mining</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../block_chain.html">Block Chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transactions.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wallets.html">Wallets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p2p_networking.html">P2P Network</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="index.html#">RPC API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/index.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/testing.html">Testing Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/transactions.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/payment_processing.html">Payment Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/p2p_networking.html">P2P Network</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+</ul>
+
+              </div>
+            
+          
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../p2p_networking.html"
+                        title="previous chapter">P2P Network</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="getbestblockhash.html"
+                        title="next chapter">getbestblockhash</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div>
+    <h4>Contribute</h4>
+    <p class="topless">
+      <a href="https://github.com/pandora-documentation/website/blob/master/reference/rpc/index.rst">Edit Page</a>
+    </p>
+  </div>
+        </div>
+      </div>
+       
+  
+        <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+              
+  <div class="section" id="rpc-api-reference">
+<h1>RPC API Reference<a class="headerlink" href="index.html#rpc-api-reference" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="blockchain-rpcs">
+<h2>Blockchain RPCs<a class="headerlink" href="index.html#blockchain-rpcs" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getbestblockhash.html">getbestblockhash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getblock.html">getblock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getblockchaininfo.html">getblockchaininfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getblockcount.html">getblockcount</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getblockfilter.html">getblockfilter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getblockhash.html">getblockhash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getblockheader.html">getblockheader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getblockstats.html">getblockstats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getchaintips.html">getchaintips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getchaintxstats.html">getchaintxstats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getdifficulty.html">getdifficulty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getmempoolancestors.html">getmempoolancestors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getmempooldescendants.html">getmempooldescendants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getmempoolentry.html">getmempoolentry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getmempoolinfo.html">getmempoolinfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getrawmempool.html">getrawmempool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettxout.html">gettxout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettxoutproof.html">gettxoutproof</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettxoutsetinfo.html">gettxoutsetinfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preciousblock.html">preciousblock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pruneblockchain.html">pruneblockchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="savemempool.html">savemempool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scantxoutset.html">scantxoutset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verifychain.html">verifychain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verifytxoutproof.html">verifytxoutproof</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="control-rpcs">
+<h2>Control RPCs<a class="headerlink" href="index.html#control-rpcs" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getmemoryinfo.html">getmemoryinfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getrpcinfo.html">getrpcinfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stop.html">stop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="uptime.html">uptime</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="generating-rpcs">
+<h2>Generating RPCs<a class="headerlink" href="index.html#generating-rpcs" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="generateblock.html">generateblock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generatetoaddress.html">generatetoaddress</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generatetodescriptor.html">generatetodescriptor</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="mining-rpcs">
+<h2>Mining RPCs<a class="headerlink" href="index.html#mining-rpcs" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getblocktemplate.html">getblocktemplate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getmininginfo.html">getmininginfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getnetworkhashps.html">getnetworkhashps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prioritisetransaction.html">prioritisetransaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="submitblock.html">submitblock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="submitheader.html">submitheader</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="network-rpcs">
+<h2>Network RPCs<a class="headerlink" href="index.html#network-rpcs" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="addnode.html">addnode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clearbanned.html">clearbanned</a></li>
+<li class="toctree-l1"><a class="reference internal" href="disconnectnode.html">disconnectnode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getaddednodeinfo.html">getaddednodeinfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getconnectioncount.html">getconnectioncount</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getnettotals.html">getnettotals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getnetworkinfo.html">getnetworkinfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getnodeaddresses.html">getnodeaddresses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getpeerinfo.html">getpeerinfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listbanned.html">listbanned</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ping.html">ping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setban.html">setban</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setnetworkactive.html">setnetworkactive</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="rawtransactions-rpcs">
+<h2>Rawtransactions RPCs<a class="headerlink" href="index.html#rawtransactions-rpcs" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="analyzepsbt.html">analyzepsbt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="combinepsbt.html">combinepsbt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="combinerawtransaction.html">combinerawtransaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="converttopsbt.html">converttopsbt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="createpsbt.html">createpsbt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="createrawtransaction.html">createrawtransaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decodepsbt.html">decodepsbt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decoderawtransaction.html">decoderawtransaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decodescript.html">decodescript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="finalizepsbt.html">finalizepsbt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fundrawtransaction.html">fundrawtransaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getrawtransaction.html">getrawtransaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joinpsbts.html">joinpsbts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sendrawtransaction.html">sendrawtransaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="signrawtransactionwithkey.html">signrawtransactionwithkey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testmempoolaccept.html">testmempoolaccept</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utxoupdatepsbt.html">utxoupdatepsbt</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="util-rpcs">
+<h2>Util RPCs<a class="headerlink" href="index.html#util-rpcs" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="createmultisig.html">createmultisig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deriveaddresses.html">deriveaddresses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="estimatesmartfee.html">estimatesmartfee</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getdescriptorinfo.html">getdescriptorinfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getindexinfo.html">getindexinfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="signmessagewithprivkey.html">signmessagewithprivkey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="validateaddress.html">validateaddress</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verifymessage.html">verifymessage</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="wallet-rpcs">
+<h2>Wallet RPCs<a class="headerlink" href="index.html#wallet-rpcs" title="Permalink to this headline">¶</a></h2>
+<p><strong>Note:</strong> the wallet RPCs are only available if Pandora Core was built
+with wallet support, which is the default.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="abandontransaction.html">abandontransaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="abortrescan.html">abortrescan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="addmultisigaddress.html">addmultisigaddress</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backupwallet.html">backupwallet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bumpfee.html">bumpfee</a></li>
+<li class="toctree-l1"><a class="reference internal" href="createwallet.html">createwallet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dumpprivkey.html">dumpprivkey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dumpwallet.html">dumpwallet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="encryptwallet.html">encryptwallet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getaddressesbylabel.html">getaddressesbylabel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getaddressinfo.html">getaddressinfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getbalance.html">getbalance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getbalances.html">getbalances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getnewaddress.html">getnewaddress</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getrawchangeaddress.html">getrawchangeaddress</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getreceivedbyaddress.html">getreceivedbyaddress</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getreceivedbylabel.html">getreceivedbylabel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettransaction.html">gettransaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getunconfirmedbalance.html">getunconfirmedbalance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getwalletinfo.html">getwalletinfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importaddress.html">importaddress</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importdescriptors.html">importdescriptors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importmulti.html">importmulti</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importprivkey.html">importprivkey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importprunedfunds.html">importprunedfunds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importpubkey.html">importpubkey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importwallet.html">importwallet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keypoolrefill.html">keypoolrefill</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listaddressgroupings.html">listaddressgroupings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listlabels.html">listlabels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listlockunspent.html">listlockunspent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listreceivedbyaddress.html">listreceivedbyaddress</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listreceivedbylabel.html">listreceivedbylabel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listsinceblock.html">listsinceblock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listtransactions.html">listtransactions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listunspent.html">listunspent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listwalletdir.html">listwalletdir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listwallets.html">listwallets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loadwallet.html">loadwallet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lockunspent.html">lockunspent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="psbtbumpfee.html">psbtbumpfee</a></li>
+<li class="toctree-l1"><a class="reference internal" href="removeprunedfunds.html">removeprunedfunds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rescanblockchain.html">rescanblockchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="send.html">send</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sendmany.html">sendmany</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sendtoaddress.html">sendtoaddress</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sethdseed.html">sethdseed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setlabel.html">setlabel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settxfee.html">settxfee</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setwalletflag.html">setwalletflag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="signmessage.html">signmessage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="signrawtransactionwithwallet.html">signrawtransactionwithwallet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unloadwallet.html">unloadwallet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgradewallet.html">upgradewallet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walletcreatefundedpsbt.html">walletcreatefundedpsbt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walletlock.html">walletlock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walletpassphrase.html">walletpassphrase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walletpassphrasechange.html">walletpassphrasechange</a></li>
+<li class="toctree-l1"><a class="reference internal" href="walletprocesspsbt.html">walletprocesspsbt</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="clearer"></div>
+        </div>
+      </div>
+    </div>
+<footer class="footer">
+  <div class="footer-with-logo">
+    <div class="footer-container">
+      <a href="https://pandora.org/">
+        <div class="footer-logo"></div>
+      </a>
+
+      <div class="footer-row ">
+        <div class="donate">
+          <div class="donate-row">
+            <div>
+              <span class="footer-title">Support Pandora.org:</span>
+              <button onclick="openDonationModal()" class="donate-btn">Donate</button>
+              <p class="donate-text">
+                <a class="donate-link" href="pandora:3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd" target="_blank">3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footermenu">
+          <div class="footermenu-item footermenu-introduction">
+            <p class="footer-title">Introduction:</p>
+            <ul class="footermenu-list">
+              <li>
+                <a href="https://pandora.org/en/pandora-for-individuals">Individuals</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/pandora-for-businesses">Businesses</a>
+              </li>
+              <li>
+                <a href="../../index.html">Developers</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/getting-started">Getting started</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/how-it-works">How it works</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/you-need-to-know">You need to know</a>
+              </li>
+                <a href="https://pandora.org/en/pandora-paper">White paper</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="footermenu-item footermenu-resources">
+            <p class="footer-title">Resources:</p>
+            <ul class="footermenu-list">
+              <li>
+                <a href="https://pandora.org/en/resources">Resources</a>
+              <li>
+                <a href="https://pandora.org/en/exchanges">Exchanges</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/community">Community</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/vocabulary">Vocabulary</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/events">Events</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/pandora-core/">Pandora Core</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="footermenu-item footermenu-participate">
+            <p class="footer-title">Participate:</p>
+            <ul class="footermenu-list">
+              <li>
+                <a href="https://pandora.org/en/support-pandora">Support Pandora</a>
+              
+              </li>
+              <li>
+                <a href="https://pandora.org/en/buy">Buy Pandora</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/full-node">Running a full node</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/development">Development</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footermenu-item footermenu-other">
+            <p class="footer-title">Other:</p>
+            <a href="https://pandora.org/en/scams">Avoid Scams</a>
+            <a href="https://pandora.org/en/legal">Legal</a>
+            <a href="https://pandora.org/en/privacy">Privacy Policy</a>
+            <a href="https://pandora.org/en/press">Press</a>
+            <a href="https://pandora.org/en/about-us">About pandora.org</a>
+            <a href="https://pandora.org/en/blog">Blog</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+      <div>&copy; Copyright Pandora Project 2009-2020.</div>
+  </div>
+</footer>
+
+<div id="donation-modal" style="display: none" class="donation-modal open">
+  <div>
+    <div>
+      <div class="modal-close-btn" onclick="closeDonationModal()">×</div>
+      <p class="modal-header-text">Donate to Pandora.org</p>
+    </div>
+    <p class="modal-subheader">Use this QR code or address below</p>
+    <div style="text-align: center;">
+      <div id="donation-qr-code" data-address="3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd"></div>
+    </div>
+    <div>
+      <a
+        class="donation-btc-address"
+        href="pandora:3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd"
+        target="_blank"
+      >
+        3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd
+      </a>
+    </div>
+    <div style="overflow-y:hidden;text-align: center;">
+      <div class="donation-buttons">
+        <button type="button" class="donation-amount-btn" data-amount-usd="5">
+          $5.00
+          <div class="donation-amount-usd-in-btc">(... PDC)</div>
+        </button>
+        <button type="button" class="donation-amount-btn" data-amount-usd="25">
+          $25.00
+          <div class="donation-amount-usd-in-btc">(... PDC)</div>
+        </button>
+        <button type="button" class="donation-amount-btn" data-amount-usd="50">
+          $50.00
+          <div class="donation-amount-usd-in-btc">(... PDC)</div>
+        </button>
+      </div>
+
+      <div class="donation-inputs">
+        <input
+          type="text"
+          placeholder="Or custom amount? (PDC)"
+          id="donation-input-amount-btc" class="donation-amount-input">
+        <input
+          type="text"
+          placeholder="Or custom amount? (USD)"
+          id="donation-input-amount-usd" class="donation-amount-input">
+      </div>
+
+      <div>
+        <textarea
+          class="donation-amount-input"
+          id="donation-input-message"
+          placeholder="Optional description (for your wallet)"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+  </body>
+</html>
