@@ -1,0 +1,475 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="This site aims to provide the docs
+                you need to understand Pandora and start building Pandora-based
+                applications." />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta property="og:title" content="getpeerinfo &#8212; Pandora" />
+    <meta property="og:description" content="This site aims to provide the
+    docs you need to understand Pandora and start building Pandora-based
+    applications." />
+    <meta property="og:image" content="https://developer.pandora.org/static/pandoradocs.png" />
+    <meta property="og:type" content="website" />
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap" rel="stylesheet">
+    
+    <title>getpeerinfo &#8212; Pandora</title>
+
+    <link rel="stylesheet" href="../../static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../static/sphinxbootstrap4.css" type="text/css" />
+    <link rel="stylesheet" href="../../static/bootstrap-4.3.1-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../static/css/main.css" />
+    
+    <script id="documentation_options" data-url_root="../../" src="../../static/documentation_options.js"></script>
+    <script src="../../static/jquery.js"></script>
+    <script src="../../static/underscore.js"></script>
+    <script src="../../static/doctools.js"></script>
+    <script src="../../static/language_data.js"></script>
+    <script src="../../static/js/jquery.qrcode.js"></script>
+    <script type="text/javascript" src="../../static/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../static/sphinxbootstrap4.js"></script>
+    <link rel="shortcut icon" href="../../static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="listbanned" href="listbanned.html" />
+    <link rel="prev" title="getnodeaddresses" href="getnodeaddresses.html" /> 
+  </head><body>
+  
+<nav class="navbar navbar-expand-md  fixed-top navbar-dark">
+		<div class="content-container d-flex flex-wrap">
+			<a class="navbar-brand py-1" href="../../index.html">
+				<div class="header-logo">
+					<div class="logo-light"></div>
+				</div>
+			</a>
+			<button class="navbar-toggler navbar-dark ml-auto py-2 black" type="button" data-toggle="collapse"
+				data-target="#exCollapsingNavbar2">
+				&#9776;
+			</button>
+			<div class="navbar-collapse collapse" id="exCollapsingNavbar2">
+				<ul class="navbar-nav mr-auto">
+					
+				</ul>
+				<div class="dropdown-divider d-block d-md-none my-3"></div>
+				
+<form class="form-inline navbar-search" action="../../search.html" method="get">
+  <input type="text" name="q" class="navbar-search-input form-control" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+			</div>
+		</div>
+	
+		<!--<div class="row hidden-sm-up">
+						<div class="collapse navbar-toggleable-xs container" id="exCollapsingNavbar2">
+								<div class="container">
+								　　 <a class="navbar-brand" href="../../index.html">
+												Pandora
+										</a>
+								</div>
+								<ul class="nav navbar-nav">
+								</ul>
+								<div class="dropdown-divider"></div>
+								<div class="navbar-text">search<div>
+								
+<form class="form-inline navbar-search" action="../../search.html" method="get">
+  <input type="text" name="q" class="navbar-search-input form-control" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+						</div>
+				</div>-->
+</nav>
+</div>
+
+  
+  <div class="breadcrumbs-section" role="navigation" aria-label="related navigation">
+	<div class="content-container">
+		<div class="d-flex justify-content-between flex-wrap">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">
+					<a href="../../index.html">Pandora</a>
+				</li>
+				<li class="breadcrumb-item">
+					<a href="../index.html" >Reference</a>
+				</li>
+				<li class="breadcrumb-item">
+					<a href="index.html"  accesskey="U" class="active" >RPC API Reference</a>
+				</li>
+				<li class="breadcrumb-item active">getpeerinfo</li>
+			</ol>
+
+			<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+				<a href="getnodeaddresses.html" title="Previous Chapter: getnodeaddresses" class="btn btn-primary"
+					role="botton" accesskey="P">
+					&laquo; getnodeaddresses
+				</a>
+				<a href="listbanned.html" title="Next Chapter: listbanned" class="btn btn-primary"
+					role="botton" accesskey="N">
+					listbanned &raquo;
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+  <div class="main container-fluid">
+    <div class="content-container">
+      <div class="row"> 
+  
+      <div class="sphinxsidebar d-none d-md-block">
+        <div class="sphinxsidebarwrapper">          
+            <h4>Table Of Contents</h4>
+            
+            
+              <div class="sidebartoctree">
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../devguide/index.html">Developer Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/block_chain.html">Block Chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/transactions.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/contracts.html">Contracts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/wallets.html">Wallets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/payment_processing.html">Payment Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/operating_modes.html">Operating Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/p2p_network.html">P2P Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../devguide/mining.html">Mining</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../block_chain.html">Block Chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transactions.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wallets.html">Wallets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p2p_networking.html">P2P Network</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">RPC API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/index.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/testing.html">Testing Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/transactions.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/payment_processing.html">Payment Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/p2p_networking.html">P2P Network</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+</ul>
+
+              </div>
+            
+          
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="getnodeaddresses.html"
+                        title="previous chapter">getnodeaddresses</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="listbanned.html"
+                        title="next chapter">listbanned</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div>
+    <h4>Contribute</h4>
+    <p class="topless">
+      <a href="https://github.com/pandora-documentation/website/blob/master/reference/rpc/getpeerinfo.rst">Edit Page</a>
+    </p>
+  </div>
+        </div>
+      </div>
+       
+  
+        <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+              
+  <div class="section" id="getpeerinfo">
+<h1>getpeerinfo<a class="headerlink" href="getpeerinfo.html#getpeerinfo" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">getpeerinfo</span></code></p>
+<p>Returns data about each connected network node as a json array of objects.</p>
+<div class="section" id="result">
+<h2>Result<a class="headerlink" href="getpeerinfo.html#result" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>                                  <span class="p">(</span><span class="n">json</span> <span class="n">array</span><span class="p">)</span>
+  <span class="p">{</span>                                <span class="p">(</span><span class="n">json</span> <span class="nb">object</span><span class="p">)</span>
+    <span class="s2">&quot;id&quot;</span> <span class="p">:</span> <span class="n">n</span><span class="p">,</span>                      <span class="p">(</span><span class="n">numeric</span><span class="p">)</span> <span class="n">Peer</span> <span class="n">index</span>
+    <span class="s2">&quot;addr&quot;</span> <span class="p">:</span> <span class="s2">&quot;str&quot;</span><span class="p">,</span>                <span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="p">(</span><span class="n">host</span><span class="p">:</span><span class="n">port</span><span class="p">)</span> <span class="n">The</span> <span class="n">IP</span> <span class="n">address</span> <span class="ow">and</span> <span class="n">port</span> <span class="n">of</span> <span class="n">the</span> <span class="n">peer</span>
+    <span class="s2">&quot;addrbind&quot;</span> <span class="p">:</span> <span class="s2">&quot;str&quot;</span><span class="p">,</span>            <span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="p">(</span><span class="n">ip</span><span class="p">:</span><span class="n">port</span><span class="p">)</span> <span class="n">Bind</span> <span class="n">address</span> <span class="n">of</span> <span class="n">the</span> <span class="n">connection</span> <span class="n">to</span> <span class="n">the</span> <span class="n">peer</span>
+    <span class="s2">&quot;addrlocal&quot;</span> <span class="p">:</span> <span class="s2">&quot;str&quot;</span><span class="p">,</span>           <span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="p">(</span><span class="n">ip</span><span class="p">:</span><span class="n">port</span><span class="p">)</span> <span class="n">Local</span> <span class="n">address</span> <span class="k">as</span> <span class="n">reported</span> <span class="n">by</span> <span class="n">the</span> <span class="n">peer</span>
+    <span class="s2">&quot;network&quot;</span> <span class="p">:</span> <span class="s2">&quot;str&quot;</span><span class="p">,</span>             <span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="n">Network</span> <span class="p">(</span><span class="n">ipv4</span><span class="p">,</span> <span class="n">ipv6</span><span class="p">,</span> <span class="ow">or</span> <span class="n">onion</span><span class="p">)</span> <span class="n">the</span> <span class="n">peer</span> <span class="n">connected</span> <span class="n">through</span>
+    <span class="s2">&quot;mapped_as&quot;</span> <span class="p">:</span> <span class="n">n</span><span class="p">,</span>               <span class="p">(</span><span class="n">numeric</span><span class="p">)</span> <span class="n">The</span> <span class="n">AS</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">BGP</span> <span class="n">route</span> <span class="n">to</span> <span class="n">the</span> <span class="n">peer</span> <span class="n">used</span> <span class="k">for</span> <span class="n">diversifying</span>
+                                   <span class="n">peer</span> <span class="n">selection</span> <span class="p">(</span><span class="n">only</span> <span class="n">available</span> <span class="k">if</span> <span class="n">the</span> <span class="n">asmap</span> <span class="n">config</span> <span class="n">flag</span> <span class="ow">is</span> <span class="nb">set</span><span class="p">)</span>
+    <span class="s2">&quot;services&quot;</span> <span class="p">:</span> <span class="s2">&quot;hex&quot;</span><span class="p">,</span>            <span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="n">The</span> <span class="n">services</span> <span class="n">offered</span>
+    <span class="s2">&quot;servicesnames&quot;</span> <span class="p">:</span> <span class="p">[</span>            <span class="p">(</span><span class="n">json</span> <span class="n">array</span><span class="p">)</span> <span class="n">the</span> <span class="n">services</span> <span class="n">offered</span><span class="p">,</span> <span class="ow">in</span> <span class="n">human</span><span class="o">-</span><span class="n">readable</span> <span class="n">form</span>
+      <span class="s2">&quot;str&quot;</span><span class="p">,</span>                       <span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="n">the</span> <span class="n">service</span> <span class="n">name</span> <span class="k">if</span> <span class="n">it</span> <span class="ow">is</span> <span class="n">recognised</span>
+      <span class="o">...</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;relaytxes&quot;</span> <span class="p">:</span> <span class="n">true</span><span class="o">|</span><span class="n">false</span><span class="p">,</span>      <span class="p">(</span><span class="n">boolean</span><span class="p">)</span> <span class="n">Whether</span> <span class="n">peer</span> <span class="n">has</span> <span class="n">asked</span> <span class="n">us</span> <span class="n">to</span> <span class="n">relay</span> <span class="n">transactions</span> <span class="n">to</span> <span class="n">it</span>
+    <span class="s2">&quot;lastsend&quot;</span> <span class="p">:</span> <span class="n">xxx</span><span class="p">,</span>              <span class="p">(</span><span class="n">numeric</span><span class="p">)</span> <span class="n">The</span> <span class="n">UNIX</span> <span class="n">epoch</span> <span class="n">time</span> <span class="n">of</span> <span class="n">the</span> <span class="n">last</span> <span class="n">send</span>
+    <span class="s2">&quot;lastrecv&quot;</span> <span class="p">:</span> <span class="n">xxx</span><span class="p">,</span>              <span class="p">(</span><span class="n">numeric</span><span class="p">)</span> <span class="n">The</span> <span class="n">UNIX</span> <span class="n">epoch</span> <span class="n">time</span> <span class="n">of</span> <span class="n">the</span> <span class="n">last</span> <span class="n">receive</span>
+    <span class="s2">&quot;last_transaction&quot;</span> <span class="p">:</span> <span class="n">xxx</span><span class="p">,</span>      <span class="p">(</span><span class="n">numeric</span><span class="p">)</span> <span class="n">The</span> <span class="n">UNIX</span> <span class="n">epoch</span> <span class="n">time</span> <span class="n">of</span> <span class="n">the</span> <span class="n">last</span> <span class="n">valid</span> <span class="n">transaction</span> <span class="n">received</span> <span class="kn">from</span> <span class="nn">this</span> <span class="n">peer</span>
+    <span class="s2">&quot;last_block&quot;</span> <span class="p">:</span> <span class="n">xxx</span><span class="p">,</span>            <span class="p">(</span><span class="n">numeric</span><span class="p">)</span> <span class="n">The</span> <span class="n">UNIX</span> <span class="n">epoch</span> <span class="n">time</span> <span class="n">of</span> <span class="n">the</span> <span class="n">last</span> <span class="n">block</span> <span class="n">received</span> <span class="kn">from</span> <span class="nn">this</span> <span class="n">peer</span>
+    <span class="s2">&quot;bytessent&quot;</span> <span class="p">:</span> <span class="n">n</span><span class="p">,</span>               <span class="p">(</span><span class="n">numeric</span><span class="p">)</span> <span class="n">The</span> <span class="n">total</span> <span class="nb">bytes</span> <span class="n">sent</span>
+    <span class="s2">&quot;bytesrecv&quot;</span> <span class="p">:</span> <span class="n">n</span><span class="p">,</span>               <span class="p">(</span><span class="n">numeric</span><span class="p">)</span> <span class="n">The</span> <span class="n">total</span> <span class="nb">bytes</span> <span class="n">received</span>
+    <span class="s2">&quot;conntime&quot;</span> <span class="p">:</span> <span class="n">xxx</span><span class="p">,</span>              <span class="p">(</span><span class="n">numeric</span><span class="p">)</span> <span class="n">The</span> <span class="n">UNIX</span> <span class="n">epoch</span> <span class="n">time</span> <span class="n">of</span> <span class="n">the</span> <span class="n">connection</span>
+    <span class="s2">&quot;timeoffset&quot;</span> <span class="p">:</span> <span class="n">n</span><span class="p">,</span>              <span class="p">(</span><span class="n">numeric</span><span class="p">)</span> <span class="n">The</span> <span class="n">time</span> <span class="n">offset</span> <span class="ow">in</span> <span class="n">seconds</span>
+    <span class="s2">&quot;pingtime&quot;</span> <span class="p">:</span> <span class="n">n</span><span class="p">,</span>                <span class="p">(</span><span class="n">numeric</span><span class="p">)</span> <span class="n">ping</span> <span class="n">time</span> <span class="p">(</span><span class="k">if</span> <span class="n">available</span><span class="p">)</span>
+    <span class="s2">&quot;minping&quot;</span> <span class="p">:</span> <span class="n">n</span><span class="p">,</span>                 <span class="p">(</span><span class="n">numeric</span><span class="p">)</span> <span class="n">minimum</span> <span class="n">observed</span> <span class="n">ping</span> <span class="n">time</span> <span class="p">(</span><span class="k">if</span> <span class="nb">any</span> <span class="n">at</span> <span class="nb">all</span><span class="p">)</span>
+    <span class="s2">&quot;pingwait&quot;</span> <span class="p">:</span> <span class="n">n</span><span class="p">,</span>                <span class="p">(</span><span class="n">numeric</span><span class="p">)</span> <span class="n">ping</span> <span class="n">wait</span> <span class="p">(</span><span class="k">if</span> <span class="n">non</span><span class="o">-</span><span class="n">zero</span><span class="p">)</span>
+    <span class="s2">&quot;version&quot;</span> <span class="p">:</span> <span class="n">n</span><span class="p">,</span>                 <span class="p">(</span><span class="n">numeric</span><span class="p">)</span> <span class="n">The</span> <span class="n">peer</span> <span class="n">version</span><span class="p">,</span> <span class="n">such</span> <span class="k">as</span> <span class="mi">70001</span>
+    <span class="s2">&quot;subver&quot;</span> <span class="p">:</span> <span class="s2">&quot;str&quot;</span><span class="p">,</span>              <span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="n">The</span> <span class="n">string</span> <span class="n">version</span>
+    <span class="s2">&quot;inbound&quot;</span> <span class="p">:</span> <span class="n">true</span><span class="o">|</span><span class="n">false</span><span class="p">,</span>        <span class="p">(</span><span class="n">boolean</span><span class="p">)</span> <span class="n">Inbound</span> <span class="p">(</span><span class="n">true</span><span class="p">)</span> <span class="ow">or</span> <span class="n">Outbound</span> <span class="p">(</span><span class="n">false</span><span class="p">)</span>
+    <span class="s2">&quot;addnode&quot;</span> <span class="p">:</span> <span class="n">true</span><span class="o">|</span><span class="n">false</span><span class="p">,</span>        <span class="p">(</span><span class="n">boolean</span><span class="p">)</span> <span class="n">Whether</span> <span class="n">connection</span> <span class="n">was</span> <span class="n">due</span> <span class="n">to</span> <span class="n">addnode</span><span class="o">/-</span><span class="n">connect</span> <span class="ow">or</span> <span class="k">if</span> <span class="n">it</span> <span class="n">was</span> <span class="n">an</span> <span class="n">automatic</span><span class="o">/</span><span class="n">inbound</span> <span class="n">connection</span>
+                                   <span class="p">(</span><span class="n">DEPRECATED</span><span class="p">,</span> <span class="n">returned</span> <span class="n">only</span> <span class="k">if</span> <span class="n">the</span> <span class="n">config</span> <span class="n">option</span> <span class="o">-</span><span class="n">deprecatedrpc</span><span class="o">=</span><span class="n">getpeerinfo_addnode</span> <span class="ow">is</span> <span class="n">passed</span><span class="p">)</span>
+    <span class="s2">&quot;connection_type&quot;</span> <span class="p">:</span> <span class="s2">&quot;str&quot;</span><span class="p">,</span>     <span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="n">Type</span> <span class="n">of</span> <span class="n">connection</span><span class="p">:</span>
+                                   <span class="n">outbound</span><span class="o">-</span><span class="n">full</span><span class="o">-</span><span class="n">relay</span> <span class="p">(</span><span class="n">default</span> <span class="n">automatic</span> <span class="n">connections</span><span class="p">),</span>
+                                   <span class="n">block</span><span class="o">-</span><span class="n">relay</span><span class="o">-</span><span class="n">only</span> <span class="p">(</span><span class="n">does</span> <span class="ow">not</span> <span class="n">relay</span> <span class="n">transactions</span> <span class="ow">or</span> <span class="n">addresses</span><span class="p">),</span>
+                                   <span class="n">inbound</span> <span class="p">(</span><span class="n">initiated</span> <span class="n">by</span> <span class="n">the</span> <span class="n">peer</span><span class="p">),</span>
+                                   <span class="n">manual</span> <span class="p">(</span><span class="n">added</span> <span class="n">via</span> <span class="n">addnode</span> <span class="n">RPC</span> <span class="ow">or</span> <span class="o">-</span><span class="n">addnode</span><span class="o">/-</span><span class="n">connect</span> <span class="n">configuration</span> <span class="n">options</span><span class="p">),</span>
+                                   <span class="n">addr</span><span class="o">-</span><span class="n">fetch</span> <span class="p">(</span><span class="n">short</span><span class="o">-</span><span class="n">lived</span> <span class="n">automatic</span> <span class="n">connection</span> <span class="k">for</span> <span class="n">soliciting</span> <span class="n">addresses</span><span class="p">),</span>
+                                   <span class="n">feeler</span> <span class="p">(</span><span class="n">short</span><span class="o">-</span><span class="n">lived</span> <span class="n">automatic</span> <span class="n">connection</span> <span class="k">for</span> <span class="n">testing</span> <span class="n">addresses</span><span class="p">)</span><span class="o">.</span>
+                                   <span class="n">Please</span> <span class="n">note</span> <span class="n">this</span> <span class="n">output</span> <span class="ow">is</span> <span class="n">unlikely</span> <span class="n">to</span> <span class="n">be</span> <span class="n">stable</span> <span class="ow">in</span> <span class="n">upcoming</span> <span class="n">releases</span> <span class="k">as</span> <span class="n">we</span> <span class="n">iterate</span> <span class="n">to</span>
+                                   <span class="n">best</span> <span class="n">capture</span> <span class="n">connection</span> <span class="n">behaviors</span><span class="o">.</span>
+    <span class="s2">&quot;startingheight&quot;</span> <span class="p">:</span> <span class="n">n</span><span class="p">,</span>          <span class="p">(</span><span class="n">numeric</span><span class="p">)</span> <span class="n">The</span> <span class="n">starting</span> <span class="n">height</span> <span class="p">(</span><span class="n">block</span><span class="p">)</span> <span class="n">of</span> <span class="n">the</span> <span class="n">peer</span>
+    <span class="s2">&quot;banscore&quot;</span> <span class="p">:</span> <span class="n">n</span><span class="p">,</span>                <span class="p">(</span><span class="n">numeric</span><span class="p">)</span> <span class="n">The</span> <span class="n">ban</span> <span class="n">score</span> <span class="p">(</span><span class="n">DEPRECATED</span><span class="p">,</span> <span class="n">returned</span> <span class="n">only</span> <span class="k">if</span> <span class="n">config</span> <span class="n">option</span> <span class="o">-</span><span class="n">deprecatedrpc</span><span class="o">=</span><span class="n">banscore</span> <span class="ow">is</span> <span class="n">passed</span><span class="p">)</span>
+    <span class="s2">&quot;synced_headers&quot;</span> <span class="p">:</span> <span class="n">n</span><span class="p">,</span>          <span class="p">(</span><span class="n">numeric</span><span class="p">)</span> <span class="n">The</span> <span class="n">last</span> <span class="n">header</span> <span class="n">we</span> <span class="n">have</span> <span class="ow">in</span> <span class="n">common</span> <span class="k">with</span> <span class="n">this</span> <span class="n">peer</span>
+    <span class="s2">&quot;synced_blocks&quot;</span> <span class="p">:</span> <span class="n">n</span><span class="p">,</span>           <span class="p">(</span><span class="n">numeric</span><span class="p">)</span> <span class="n">The</span> <span class="n">last</span> <span class="n">block</span> <span class="n">we</span> <span class="n">have</span> <span class="ow">in</span> <span class="n">common</span> <span class="k">with</span> <span class="n">this</span> <span class="n">peer</span>
+    <span class="s2">&quot;inflight&quot;</span> <span class="p">:</span> <span class="p">[</span>                 <span class="p">(</span><span class="n">json</span> <span class="n">array</span><span class="p">)</span>
+      <span class="n">n</span><span class="p">,</span>                           <span class="p">(</span><span class="n">numeric</span><span class="p">)</span> <span class="n">The</span> <span class="n">heights</span> <span class="n">of</span> <span class="n">blocks</span> <span class="n">we</span><span class="s1">&#39;re currently asking from this peer</span>
+      <span class="o">...</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;whitelisted&quot;</span> <span class="p">:</span> <span class="n">true</span><span class="o">|</span><span class="n">false</span><span class="p">,</span>    <span class="p">(</span><span class="n">boolean</span><span class="p">,</span> <span class="n">optional</span><span class="p">)</span> <span class="n">Whether</span> <span class="n">the</span> <span class="n">peer</span> <span class="ow">is</span> <span class="n">whitelisted</span> <span class="k">with</span> <span class="n">default</span> <span class="n">permissions</span>
+                                   <span class="p">(</span><span class="n">DEPRECATED</span><span class="p">,</span> <span class="n">returned</span> <span class="n">only</span> <span class="k">if</span> <span class="n">config</span> <span class="n">option</span> <span class="o">-</span><span class="n">deprecatedrpc</span><span class="o">=</span><span class="n">whitelisted</span> <span class="ow">is</span> <span class="n">passed</span><span class="p">)</span>
+    <span class="s2">&quot;permissions&quot;</span> <span class="p">:</span> <span class="p">[</span>              <span class="p">(</span><span class="n">json</span> <span class="n">array</span><span class="p">)</span> <span class="n">Any</span> <span class="n">special</span> <span class="n">permissions</span> <span class="n">that</span> <span class="n">have</span> <span class="n">been</span> <span class="n">granted</span> <span class="n">to</span> <span class="n">this</span> <span class="n">peer</span>
+      <span class="s2">&quot;str&quot;</span><span class="p">,</span>                       <span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="n">bloomfilter</span> <span class="p">(</span><span class="n">allow</span> <span class="n">requesting</span> <span class="n">BIP37</span> <span class="n">filtered</span> <span class="n">blocks</span> <span class="ow">and</span> <span class="n">transactions</span><span class="p">),</span>
+                                   <span class="n">noban</span> <span class="p">(</span><span class="n">do</span> <span class="ow">not</span> <span class="n">ban</span> <span class="k">for</span> <span class="n">misbehavior</span><span class="p">;</span> <span class="n">implies</span> <span class="n">download</span><span class="p">),</span>
+                                   <span class="n">forcerelay</span> <span class="p">(</span><span class="n">relay</span> <span class="n">transactions</span> <span class="n">that</span> <span class="n">are</span> <span class="n">already</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">mempool</span><span class="p">;</span> <span class="n">implies</span> <span class="n">relay</span><span class="p">),</span>
+                                   <span class="n">relay</span> <span class="p">(</span><span class="n">relay</span> <span class="n">even</span> <span class="ow">in</span> <span class="o">-</span><span class="n">blocksonly</span> <span class="n">mode</span><span class="p">,</span> <span class="ow">and</span> <span class="n">unlimited</span> <span class="n">transaction</span> <span class="n">announcements</span><span class="p">),</span>
+                                   <span class="n">mempool</span> <span class="p">(</span><span class="n">allow</span> <span class="n">requesting</span> <span class="n">BIP35</span> <span class="n">mempool</span> <span class="n">contents</span><span class="p">),</span>
+                                   <span class="n">download</span> <span class="p">(</span><span class="n">allow</span> <span class="n">getheaders</span> <span class="n">during</span> <span class="n">IBD</span><span class="p">,</span> <span class="n">no</span> <span class="n">disconnect</span> <span class="n">after</span> <span class="n">maxuploadtarget</span> <span class="n">limit</span><span class="p">),</span>
+                                   <span class="n">addr</span> <span class="p">(</span><span class="n">responses</span> <span class="n">to</span> <span class="n">GETADDR</span> <span class="n">avoid</span> <span class="n">hitting</span> <span class="n">the</span> <span class="n">cache</span> <span class="ow">and</span> <span class="n">contain</span> <span class="n">random</span> <span class="n">records</span> <span class="k">with</span> <span class="n">the</span> <span class="n">most</span> <span class="n">up</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">date</span> <span class="n">info</span><span class="p">)</span><span class="o">.</span>
+
+      <span class="o">...</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;minfeefilter&quot;</span> <span class="p">:</span> <span class="n">n</span><span class="p">,</span>            <span class="p">(</span><span class="n">numeric</span><span class="p">)</span> <span class="n">The</span> <span class="n">minimum</span> <span class="n">fee</span> <span class="n">rate</span> <span class="k">for</span> <span class="n">transactions</span> <span class="n">this</span> <span class="n">peer</span> <span class="n">accepts</span>
+    <span class="s2">&quot;bytessent_per_msg&quot;</span> <span class="p">:</span> <span class="p">{</span>        <span class="p">(</span><span class="n">json</span> <span class="nb">object</span><span class="p">)</span>
+      <span class="s2">&quot;msg&quot;</span> <span class="p">:</span> <span class="n">n</span><span class="p">,</span>                   <span class="p">(</span><span class="n">numeric</span><span class="p">)</span> <span class="n">The</span> <span class="n">total</span> <span class="nb">bytes</span> <span class="n">sent</span> <span class="n">aggregated</span> <span class="n">by</span> <span class="n">message</span> <span class="nb">type</span>
+                                   <span class="n">When</span> <span class="n">a</span> <span class="n">message</span> <span class="nb">type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">listed</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">json</span> <span class="nb">object</span><span class="p">,</span> <span class="n">the</span> <span class="nb">bytes</span> <span class="n">sent</span> <span class="n">are</span> <span class="mf">0.</span>
+                                   <span class="n">Only</span> <span class="n">known</span> <span class="n">message</span> <span class="n">types</span> <span class="n">can</span> <span class="n">appear</span> <span class="k">as</span> <span class="n">keys</span> <span class="ow">in</span> <span class="n">the</span> <span class="nb">object</span><span class="o">.</span>
+      <span class="o">...</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;bytesrecv_per_msg&quot;</span> <span class="p">:</span> <span class="p">{</span>        <span class="p">(</span><span class="n">json</span> <span class="nb">object</span><span class="p">)</span>
+      <span class="s2">&quot;msg&quot;</span> <span class="p">:</span> <span class="n">n</span>                    <span class="p">(</span><span class="n">numeric</span><span class="p">)</span> <span class="n">The</span> <span class="n">total</span> <span class="nb">bytes</span> <span class="n">received</span> <span class="n">aggregated</span> <span class="n">by</span> <span class="n">message</span> <span class="nb">type</span>
+                                   <span class="n">When</span> <span class="n">a</span> <span class="n">message</span> <span class="nb">type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">listed</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">json</span> <span class="nb">object</span><span class="p">,</span> <span class="n">the</span> <span class="nb">bytes</span> <span class="n">received</span> <span class="n">are</span> <span class="mf">0.</span>
+                                   <span class="n">Only</span> <span class="n">known</span> <span class="n">message</span> <span class="n">types</span> <span class="n">can</span> <span class="n">appear</span> <span class="k">as</span> <span class="n">keys</span> <span class="ow">in</span> <span class="n">the</span> <span class="nb">object</span> <span class="ow">and</span> <span class="nb">all</span> <span class="nb">bytes</span> <span class="n">received</span>
+                                   <span class="n">of</span> <span class="n">unknown</span> <span class="n">message</span> <span class="n">types</span> <span class="n">are</span> <span class="n">listed</span> <span class="n">under</span> <span class="s1">&#39;*other*&#39;</span><span class="o">.</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="o">...</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="getpeerinfo.html#examples" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pandora-cli getpeerinfo
+</pre></div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl --user myusername --data-binary <span class="s1">&#39;{&quot;jsonrpc&quot;: &quot;1.0&quot;, &quot;id&quot;: &quot;curltest&quot;, &quot;method&quot;: &quot;getpeerinfo&quot;, &quot;params&quot;: []}&#39;</span> -H <span class="s1">&#39;content-type: text/plain;&#39;</span> http://127.0.0.1:9337/
+</pre></div>
+</div>
+</div>
+</div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="clearer"></div>
+        </div>
+      </div>
+    </div>
+<footer class="footer">
+  <div class="footer-with-logo">
+    <div class="footer-container">
+      <a href="https://pandora.org/">
+        <div class="footer-logo"></div>
+      </a>
+
+      <div class="footer-row ">
+        <div class="donate">
+          <div class="donate-row">
+            <div>
+              <span class="footer-title">Support Pandora.org:</span>
+              <button onclick="openDonationModal()" class="donate-btn">Donate</button>
+              <p class="donate-text">
+                <a class="donate-link" href="pandora:3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd" target="_blank">3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footermenu">
+          <div class="footermenu-item footermenu-introduction">
+            <p class="footer-title">Introduction:</p>
+            <ul class="footermenu-list">
+              <li>
+                <a href="https://pandora.org/en/pandora-for-individuals">Individuals</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/pandora-for-businesses">Businesses</a>
+              </li>
+              <li>
+                <a href="../../index.html">Developers</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/getting-started">Getting started</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/how-it-works">How it works</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/you-need-to-know">You need to know</a>
+              </li>
+                <a href="https://pandora.org/en/pandora-paper">White paper</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="footermenu-item footermenu-resources">
+            <p class="footer-title">Resources:</p>
+            <ul class="footermenu-list">
+              <li>
+                <a href="https://pandora.org/en/resources">Resources</a>
+              <li>
+                <a href="https://pandora.org/en/exchanges">Exchanges</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/community">Community</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/vocabulary">Vocabulary</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/events">Events</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/pandora-core/">Pandora Core</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="footermenu-item footermenu-participate">
+            <p class="footer-title">Participate:</p>
+            <ul class="footermenu-list">
+              <li>
+                <a href="https://pandora.org/en/support-pandora">Support Pandora</a>
+              
+              </li>
+              <li>
+                <a href="https://pandora.org/en/buy">Buy Pandora</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/full-node">Running a full node</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/development">Development</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footermenu-item footermenu-other">
+            <p class="footer-title">Other:</p>
+            <a href="https://pandora.org/en/scams">Avoid Scams</a>
+            <a href="https://pandora.org/en/legal">Legal</a>
+            <a href="https://pandora.org/en/privacy">Privacy Policy</a>
+            <a href="https://pandora.org/en/press">Press</a>
+            <a href="https://pandora.org/en/about-us">About pandora.org</a>
+            <a href="https://pandora.org/en/blog">Blog</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+      <div>&copy; Copyright Pandora Project 2009-2020.</div>
+  </div>
+</footer>
+
+<div id="donation-modal" style="display: none" class="donation-modal open">
+  <div>
+    <div>
+      <div class="modal-close-btn" onclick="closeDonationModal()">×</div>
+      <p class="modal-header-text">Donate to Pandora.org</p>
+    </div>
+    <p class="modal-subheader">Use this QR code or address below</p>
+    <div style="text-align: center;">
+      <div id="donation-qr-code" data-address="3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd"></div>
+    </div>
+    <div>
+      <a
+        class="donation-btc-address"
+        href="pandora:3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd"
+        target="_blank"
+      >
+        3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd
+      </a>
+    </div>
+    <div style="overflow-y:hidden;text-align: center;">
+      <div class="donation-buttons">
+        <button type="button" class="donation-amount-btn" data-amount-usd="5">
+          $5.00
+          <div class="donation-amount-usd-in-btc">(... PDC)</div>
+        </button>
+        <button type="button" class="donation-amount-btn" data-amount-usd="25">
+          $25.00
+          <div class="donation-amount-usd-in-btc">(... PDC)</div>
+        </button>
+        <button type="button" class="donation-amount-btn" data-amount-usd="50">
+          $50.00
+          <div class="donation-amount-usd-in-btc">(... PDC)</div>
+        </button>
+      </div>
+
+      <div class="donation-inputs">
+        <input
+          type="text"
+          placeholder="Or custom amount? (PDC)"
+          id="donation-input-amount-btc" class="donation-amount-input">
+        <input
+          type="text"
+          placeholder="Or custom amount? (USD)"
+          id="donation-input-amount-usd" class="donation-amount-input">
+      </div>
+
+      <div>
+        <textarea
+          class="donation-amount-input"
+          id="donation-input-message"
+          placeholder="Optional description (for your wallet)"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+  </body>
+</html>
