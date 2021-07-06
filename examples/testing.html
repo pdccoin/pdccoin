@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="This site aims to provide the docs
+                you need to understand Pandora and start building Pandora-based
+                applications." />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta property="og:title" content="Testing Applications &#8212; Pandora" />
+    <meta property="og:description" content="This site aims to provide the
+    docs you need to understand Pandora and start building Pandora-based
+    applications." />
+    <meta property="og:image" content="https://developer.pandora.org/static/pandoradocs.png" />
+    <meta property="og:type" content="website" />
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap" rel="stylesheet">
+    
+    <title>Testing Applications &#8212; Pandora</title>
+
+    <link rel="stylesheet" href="../static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../static/sphinxbootstrap4.css" type="text/css" />
+    <link rel="stylesheet" href="../static/bootstrap-4.3.1-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../static/documentation_options.js"></script>
+    <script src="../static/jquery.js"></script>
+    <script src="../static/underscore.js"></script>
+    <script src="../static/doctools.js"></script>
+    <script src="../static/language_data.js"></script>
+    <script src="../static/js/jquery.qrcode.js"></script>
+    <script type="text/javascript" src="../static/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../static/sphinxbootstrap4.js"></script>
+    <link rel="shortcut icon" href="../static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Transactions" href="transactions.html" />
+    <link rel="prev" title="Introduction" href="intro.html" /> 
+  </head><body>
+  
+<nav class="navbar navbar-expand-md  fixed-top navbar-dark">
+		<div class="content-container d-flex flex-wrap">
+			<a class="navbar-brand py-1" href="../index.html">
+				<div class="header-logo">
+					<div class="logo-light"></div>
+				</div>
+			</a>
+			<button class="navbar-toggler navbar-dark ml-auto py-2 black" type="button" data-toggle="collapse"
+				data-target="#exCollapsingNavbar2">
+				&#9776;
+			</button>
+			<div class="navbar-collapse collapse" id="exCollapsingNavbar2">
+				<ul class="navbar-nav mr-auto">
+					
+				</ul>
+				<div class="dropdown-divider d-block d-md-none my-3"></div>
+				
+<form class="form-inline navbar-search" action="../search.html" method="get">
+  <input type="text" name="q" class="navbar-search-input form-control" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+			</div>
+		</div>
+	
+		<!--<div class="row hidden-sm-up">
+						<div class="collapse navbar-toggleable-xs container" id="exCollapsingNavbar2">
+								<div class="container">
+								　　 <a class="navbar-brand" href="../index.html">
+												Pandora
+										</a>
+								</div>
+								<ul class="nav navbar-nav">
+								</ul>
+								<div class="dropdown-divider"></div>
+								<div class="navbar-text">search<div>
+								
+<form class="form-inline navbar-search" action="../search.html" method="get">
+  <input type="text" name="q" class="navbar-search-input form-control" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+
+						</div>
+				</div>-->
+</nav>
+</div>
+
+  
+  <div class="breadcrumbs-section" role="navigation" aria-label="related navigation">
+	<div class="content-container">
+		<div class="d-flex justify-content-between flex-wrap">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">
+					<a href="../index.html">Pandora</a>
+				</li>
+				<li class="breadcrumb-item">
+					<a href="index.html"  accesskey="U" class="active" >Examples</a>
+				</li>
+				<li class="breadcrumb-item active">Testing Applications</li>
+			</ol>
+
+			<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+				<a href="intro.html" title="Previous Chapter: Introduction" class="btn btn-primary"
+					role="botton" accesskey="P">
+					&laquo; Introduction
+				</a>
+				<a href="transactions.html" title="Next Chapter: Transactions" class="btn btn-primary"
+					role="botton" accesskey="N">
+					Transactions &raquo;
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+  <div class="main container-fluid">
+    <div class="content-container">
+      <div class="row"> 
+  
+      <div class="sphinxsidebar d-none d-md-block">
+        <div class="sphinxsidebarwrapper">          
+            <h4>Table Of Contents</h4>
+            
+            
+              <div class="sidebartoctree">
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../devguide/index.html">Developer Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../devguide/block_chain.html">Block Chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../devguide/transactions.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../devguide/contracts.html">Contracts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../devguide/wallets.html">Wallets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../devguide/payment_processing.html">Payment Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../devguide/operating_modes.html">Operating Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../devguide/p2p_network.html">P2P Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../devguide/mining.html">Mining</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../reference/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/block_chain.html">Block Chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/transactions.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/wallets.html">Wallets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/p2p_networking.html">P2P Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/rpc/index.html">RPC API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="testing.html#">Testing Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transactions.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="payment_processing.html">Payment Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="p2p_networking.html">P2P Network</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+              </div>
+            
+          
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="intro.html"
+                        title="previous chapter">Introduction</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="transactions.html"
+                        title="next chapter">Transactions</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div>
+    <h4>Contribute</h4>
+    <p class="topless">
+      <a href="https://github.com/pandora-documentation/website/blob/master/examples/testing.rst">Edit Page</a>
+    </p>
+  </div>
+        </div>
+      </div>
+       
+  
+        <div class="document">
+        <div class="documentwrapper">
+          <div class="bodywrapper">
+            <div class="body">
+              
+  <div class="section" id="testing-applications">
+<h1>Testing Applications<a class="headerlink" href="testing.html#testing-applications" title="Permalink to this headline">¶</a></h1>
+<p>Pandora Core provides testing tools designed to let developers test their applications with reduced risks and limitations.</p>
+<div class="section" id="testnet">
+<h2>Testnet<a class="headerlink" href="testing.html#testnet" title="Permalink to this headline">¶</a></h2>
+<p>When run with no arguments, all Pandora Core programs default to Pandora’s main <a class="reference external" href="../devguide/p2p_network.html">network</a> (<a class="reference internal" href="../glossary.html#term-Mainnet"><span class="xref std std-term">mainnet</span></a>). However, for development, it’s safer and cheaper to use Pandora’s test <a class="reference external" href="../devguide/p2p_network.html">network</a> (testnet) where the satoshis spent have no real-world value. Testnet also relaxes some restrictions (such as standard transaction checks) so you can test functions which might currently be disabled by default on mainnet.</p>
+<p>To use testnet, use the argument <code class="docutils literal notranslate"><span class="pre">-testnet</span></code> with <code class="docutils literal notranslate"><span class="pre">pandora-cli</span></code>, <code class="docutils literal notranslate"><span class="pre">pandorad</span></code> or <code class="docutils literal notranslate"><span class="pre">pandora-qt</span></code> or add <code class="docutils literal notranslate"><span class="pre">testnet=1</span></code> to your <code class="docutils literal notranslate"><span class="pre">pandora.conf</span></code> file as <a class="reference external" href="index.html">described earlier</a>. To get free satoshis for testing, use <a class="reference external" href="https://tpfaucet.appspot.com/">Piotr Piasecki’s testnet faucet</a>. Testnet is a public resource provided for free by members of the community, so please don’t abuse it.</p>
+</div>
+<div class="section" id="regtest-mode">
+<h2>Regtest Mode<a class="headerlink" href="testing.html#regtest-mode" title="Permalink to this headline">¶</a></h2>
+<p>For situations where interaction with random peers and blocks is unnecessary or unwanted, Pandora Core’s regression test mode (regtest mode) lets you instantly create a brand-new private block chain with the same basic rules as testnet—but one major difference: you choose when to create new blocks, so you have complete control over the environment.</p>
+<p>Many developers consider regtest mode the preferred way to develop new applications. The following example will let you create a regtest environment after you first <a class="reference external" href="index.html">configure pandorad</a>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt; pandorad -regtest -daemon
+Pandora server starting
+</pre></div>
+</div>
+<p>Start <code class="docutils literal notranslate"><span class="pre">pandorad</span></code> in regtest mode to create a private block chain.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">## Pandora Core 0.10.1 and earlier</span>
+pandora-cli -regtest setgenerate <span class="nb">true</span> <span class="m">101</span>
+
+<span class="c1">## Pandora Core 17.1 and earlier</span>
+pandora-cli -regtest generate <span class="m">101</span>
+
+<span class="c1">## Pandora Core 18.0 and later</span>
+pandora-cli -regtest generatetoaddress <span class="m">101</span> <span class="k">$(</span>pandora-cli -regtest getnewaddress<span class="k">)</span>
+</pre></div>
+</div>
+<p>Generate 101 blocks using a special <a class="reference external" href="../reference/rpc/index.html">RPC</a> which is only available in regtest mode. This takes less than a second on a generic PC. Because this is a new block chain using Pandora’s default rules, the first blocks pay a block reward of 50 pandoras. Unlike mainnet, in regtest mode only the first 150 blocks pay a reward of 50 pandoras. However, a block must have 100 confirmations before that reward can be spent, so we generate 101 blocks to get access to the coinbase transaction from block #1.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pandora-cli -regtest getbalance
+<span class="m">50</span>.00000000
+</pre></div>
+</div>
+<p>Verify that we now have 50 pandoras available to spend.</p>
+<p>You can now use Pandora Core <a class="reference external" href="../reference/rpc/index.html">RPCs</a> prefixed with <code class="docutils literal notranslate"><span class="pre">pandora-cli</span> <span class="pre">-regtest</span></code>.</p>
+<p>Regtest wallets and block chain state (chainstate) are saved in the <code class="docutils literal notranslate"><span class="pre">regtest</span></code> subdirectory of the Pandora Core configuration directory. You can safely delete the <code class="docutils literal notranslate"><span class="pre">regtest</span></code> subdirectory and restart Pandora Core to start a new regtest. (See the <a class="reference external" href="index.html">Developer Examples Introduction</a> for default configuration directory locations on various operating systems. Always back up mainnet wallets before performing dangerous operations such as deleting.)</p>
+</div>
+</div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="clearer"></div>
+        </div>
+      </div>
+    </div>
+<footer class="footer">
+  <div class="footer-with-logo">
+    <div class="footer-container">
+      <a href="https://pandora.org/">
+        <div class="footer-logo"></div>
+      </a>
+
+      <div class="footer-row ">
+        <div class="donate">
+          <div class="donate-row">
+            <div>
+              <span class="footer-title">Support Pandora.org:</span>
+              <button onclick="openDonationModal()" class="donate-btn">Donate</button>
+              <p class="donate-text">
+                <a class="donate-link" href="pandora:3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd" target="_blank">3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footermenu">
+          <div class="footermenu-item footermenu-introduction">
+            <p class="footer-title">Introduction:</p>
+            <ul class="footermenu-list">
+              <li>
+                <a href="https://pandora.org/en/pandora-for-individuals">Individuals</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/pandora-for-businesses">Businesses</a>
+              </li>
+              <li>
+                <a href="../index.html">Developers</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/getting-started">Getting started</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/how-it-works">How it works</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/you-need-to-know">You need to know</a>
+              </li>
+                <a href="https://pandora.org/en/pandora-paper">White paper</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="footermenu-item footermenu-resources">
+            <p class="footer-title">Resources:</p>
+            <ul class="footermenu-list">
+              <li>
+                <a href="https://pandora.org/en/resources">Resources</a>
+              <li>
+                <a href="https://pandora.org/en/exchanges">Exchanges</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/community">Community</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/vocabulary">Vocabulary</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/events">Events</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/pandora-core/">Pandora Core</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="footermenu-item footermenu-participate">
+            <p class="footer-title">Participate:</p>
+            <ul class="footermenu-list">
+              <li>
+                <a href="https://pandora.org/en/support-pandora">Support Pandora</a>
+              
+              </li>
+              <li>
+                <a href="https://pandora.org/en/buy">Buy Pandora</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/full-node">Running a full node</a>
+              </li>
+              <li>
+                <a href="https://pandora.org/en/development">Development</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footermenu-item footermenu-other">
+            <p class="footer-title">Other:</p>
+            <a href="https://pandora.org/en/scams">Avoid Scams</a>
+            <a href="https://pandora.org/en/legal">Legal</a>
+            <a href="https://pandora.org/en/privacy">Privacy Policy</a>
+            <a href="https://pandora.org/en/press">Press</a>
+            <a href="https://pandora.org/en/about-us">About pandora.org</a>
+            <a href="https://pandora.org/en/blog">Blog</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+      <div>&copy; Copyright Pandora Project 2009-2020.</div>
+  </div>
+</footer>
+
+<div id="donation-modal" style="display: none" class="donation-modal open">
+  <div>
+    <div>
+      <div class="modal-close-btn" onclick="closeDonationModal()">×</div>
+      <p class="modal-header-text">Donate to Pandora.org</p>
+    </div>
+    <p class="modal-subheader">Use this QR code or address below</p>
+    <div style="text-align: center;">
+      <div id="donation-qr-code" data-address="3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd"></div>
+    </div>
+    <div>
+      <a
+        class="donation-btc-address"
+        href="pandora:3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd"
+        target="_blank"
+      >
+        3E8ociqZa9mZUSwGdSmAEMAoAxBK3FNDcd
+      </a>
+    </div>
+    <div style="overflow-y:hidden;text-align: center;">
+      <div class="donation-buttons">
+        <button type="button" class="donation-amount-btn" data-amount-usd="5">
+          $5.00
+          <div class="donation-amount-usd-in-btc">(... PDC)</div>
+        </button>
+        <button type="button" class="donation-amount-btn" data-amount-usd="25">
+          $25.00
+          <div class="donation-amount-usd-in-btc">(... PDC)</div>
+        </button>
+        <button type="button" class="donation-amount-btn" data-amount-usd="50">
+          $50.00
+          <div class="donation-amount-usd-in-btc">(... PDC)</div>
+        </button>
+      </div>
+
+      <div class="donation-inputs">
+        <input
+          type="text"
+          placeholder="Or custom amount? (PDC)"
+          id="donation-input-amount-btc" class="donation-amount-input">
+        <input
+          type="text"
+          placeholder="Or custom amount? (USD)"
+          id="donation-input-amount-usd" class="donation-amount-input">
+      </div>
+
+      <div>
+        <textarea
+          class="donation-amount-input"
+          id="donation-input-message"
+          placeholder="Optional description (for your wallet)"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+  </body>
+</html>
